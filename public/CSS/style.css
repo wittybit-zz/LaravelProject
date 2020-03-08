@@ -1,0 +1,57 @@
+/* No CSS *//*# sourceMappingURL=app.css.map */
+
+body{
+    background: #F3F3F3;
+  }
+
+  #sidenav{
+    background: #252525;
+    color:#ffffff;
+  }
+
+  .header{
+    background:#252525;
+    color:#ffffff!important;
+  }
+
+
+  .search{
+    background:#252525;
+  }
+
+  .accent{
+    background:#8664C3;
+    color:#ffffff;
+  }
+
+  .navItem:hover{
+    background:#8664C3;
+  }
+
+  .icon-white{
+    color:#ffffff!important;
+  }
+
+  .waves-effect.waves-accent .waves-ripple {
+  /* The alpha value allows the text and background color
+  of the button to still show through. */
+  background-color: rgba(134, 100, 195, 0.65);
+  }
+
+  #mobile-search-bar{
+    margin-top:0px;
+  }
+
+  #form1{
+    margin-left:10vw;
+  }
+
+  .no-shadows {
+    box-shadow: none!important;
+  }
+
+  .one-edge-shadow {
+      -webkit-box-shadow: 0 8px 6px -6px black;
+      -moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;
+  }

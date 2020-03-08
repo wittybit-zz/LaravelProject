@@ -19,101 +19,92 @@
 
     <!-- Font Awesome CDN -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-      body{
-        background: #F3F3F3
-      }
 
-      #sidenav{
-        background: rgb(11,11,11)
-      }
+    <link rel="stylesheet" href="{{ URL::asset('CSS/style.css') }}" />
 
-      .nav-wrapper{
-        background:#252525
-      }
+    <title>@yield('title','Layout')</title>
+    
+    
 
-      .search{
-        background:#252525
-      }
-
-      #mobile-search-bar{
-        margin-top:0px;
-      }
-
-      #form1{
-        margin-left:10vw;
-      }
-
-      .no-shadows {
-        box-shadow: none!important;
-      }
-
-      .one-edge-shadow {
-	      -webkit-box-shadow: 0 8px 6px -6px black;
-	      -moz-box-shadow: 0 8px 6px -6px black;
-	      box-shadow: 0 8px 6px -6px black;
-      }
-    </style>
 </head>
 <body>
-<nav>
-    <div class="nav-wrapper">
-      <a href="/home" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      
-      
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/home" title="Home"><i class="material-icons">home</i></a></li>
-        <li><a href="/categories"  title="Categories"><i class="material-icons">format_list_bulleted</i></a></li>
-        <li><a href="/login"  title="Login / SignUp"><i class="material-icons">fingerprint</i></a></li>
-      </ul>
+<div id="navigation">
+  <nav>
+      <div class="nav-wrapper header">
+        <a href="/home" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        
+        
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/home" title="Home" class="navItem"><i class="material-icons">home</i></a></li>
+          <li><a href="/categories"  title="Categories" class="navItem"><i class="material-icons">format_list_bulleted</i></a></li>
+          <li><a href="/login"  title="Login / SignUp" class="navItem"><i class="material-icons">fingerprint</i></a></li>
+        </ul>
 
-      <form id="form1" class="hide-on-med-and-down" >
-        <div class="input-field" style="max-width: 73vw;">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-          <div id="searchResults" ></div>
-        </div>
-      </form>
-    </div>
-    
+        <form id="form1" class="hide-on-med-and-down" >
+          <div class="input-field" style="max-width: 73vw;">
+            <input id="search" type="search" required placeholder="Search for Products" onblur="clearText()">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            <div id="searchResults" ></div>
+          </div>
+        </form>
+      </div>
       
-  <nav class=" nav-wrapper hide-on-large-only no-shadows" id="mobile-search-bar">
-  <form id="form2" class="show-on-med-and-down">
-        <div class="input-field">
-          <input id="search" type="search" required">
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-          <div id="searchResults" ></div>
-        </div>
-      </form>
-  </nav>
+        
+    <nav class=" nav-wrapper header hide-on-large-only no-shadows" id="mobile-search-bar">
+    <form id="form2" class="show-on-med-and-down">
+          <div class="input-field" >
+            <input id="search-mobile" type="search" required placeholder="Search for Products" onblur="clearText()">
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+            <div id="searchResults" ></div>
+          </div>
+        </form>
+    </nav>
 
-  <ul class="sidenav" id="mobile-demo">
-        <li><a href="/home">Home<i class="material-icons">home</i></a></li>
-        <li><a href="/categories">Categories<i class="material-icons">format_list_bulleted</i></a></li>
-        <li><a href="/cart">Cart<i class="material-icons">shopping_cart</i></a></li>
-        <li><a href="/login">Login<i class="material-icons">fingerprint</i></a></li>
-  </ul>
+    <ul class="sidenav header" id="mobile-demo">
+          <li><a href="/home" class="waves-effect waves-accent icon-white">Home<i class="material-icons icon-white">home</i></a></li>
+          <li><a href="/categories" class="waves-effect waves-accent icon-white">Categories<i class="material-icons icon-white">format_list_bulleted</i></a></li>
+          <li><a href="/cart" class="waves-effect waves-accent icon-white">Cart<i class="material-icons icon-white">shopping_cart</i></a></li>
+          <li><a href="/login" class="waves-effect waves-accent icon-white">Login<i class="material-icons icon-white">fingerprint</i></a></li>
+    </ul>
 
-  <div class="fixed-action-btn horizontal hide-on-large-only">
-  <a class="btn-floating btn-large purple">
-    <i class="large material-icons">shopping_cart</i>
-  </a>
-  <ul>
-    <li><a href="/checkout"class="btn-floating red center-align" title="Check Out"><i class="material-icons">attach_money</i></a></li>
-    <li><a href="/cart"class="btn-floating yellow darken-1" title="View Cart"><i class="material-icons">format_list_bulleted</i></a></li>
-  </ul>
+    <div class="fixed-action-btn horizontal hide-on-large-only">
+    <a class="btn-floating btn-large accent waves-effect waves-light">
+      <i class="large material-icons">shopping_cart</i>
+    </a>
+    <ul>
+      <li><a href="/checkout"class="btn-floating red " title="Check Out"><i class="material-icons">attach_money</i></a></li>
+      <li><a href="/cart"class="btn-floating yellow darken-1" title="View Cart"><i class="material-icons">format_list_bulleted</i></a></li>
+    </ul>
+  </div>
 </div>
+
 
 
   <script>
     $(document).ready(function(){
         $('.sidenav').sidenav();
         $('.fixed-action-btn').floatingActionButton();
+
     });
+
+    function clearText(){
+       document.getElementById("search").value = "";
+       document.getElementById("search-mobile").value="";
+      }
 
   </script>
 </body>
 </html>
+
+<!-- 
+Things to do:
+1. make this a template by adding yield at the appropriate places
+2. make a navigation controller using the links provided here
+3. make rest of the pages and import this layout there
+4. make a nice footer too
+5. find a way to import the scripts / dependencies globally
+
+ -->
