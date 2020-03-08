@@ -65,10 +65,21 @@
     </nav>
 
     <ul class="sidenav header" id="mobile-demo">
+      <li class="accent" style="padding-top: 10px;">
+        <div class="container" style="font-size:18px">
+          <i style="font-size: 48px;margin:0" class="large material-icons row">account_box</i>
+          <div style="width: 100%" class="waves-effect row">
+            <span class="col s10">Hello, User</span><span style="padding-top: 10px;" class="col s1 material-icons">arrow_forward</span>
+          </div>
+        </div>
+      </li>
           <li><a href="/home" class="waves-effect waves-accent icon-white">Home<i class="material-icons icon-white">home</i></a></li>
           <li><a href="/categories" class="waves-effect waves-accent icon-white">Categories<i class="material-icons icon-white">format_list_bulleted</i></a></li>
           <li><a href="/cart" class="waves-effect waves-accent icon-white">Cart<i class="material-icons icon-white">shopping_cart</i></a></li>
           <li><a href="/login" class="waves-effect waves-accent icon-white">Login<i class="material-icons icon-white">fingerprint</i></a></li>
+          <hr>
+          <li><a href="/cart" class="waves-effect waves-accent icon-white">Contact Us<i class="material-icons icon-white">email</i></a></li>
+          <li><a href="/login" class="waves-effect waves-accent icon-white">FAQs<i class="material-icons icon-white">question_answer</i></a></li>
     </ul>
 
     <div class="fixed-action-btn horizontal hide-on-large-only">
