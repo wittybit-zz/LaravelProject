@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('Header');
 });
 
-Route::view('/Header','Header2');
+Route::view('/Header','layout');
+
+Route::get('/home','NavController@home');
+Route::get('/categories','NavController@categories');
+Route::get('/cart','NavController@cart');
+Route::get('/login','NavController@login');
+Route::get('/checkout','NavController@checkout');

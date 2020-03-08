@@ -38,12 +38,13 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="/home" title="Home" class="navItem"><i class="material-icons">home</i></a></li>
           <li><a href="/categories"  title="Categories" class="navItem"><i class="material-icons">format_list_bulleted</i></a></li>
+          <li><a href="/cart" title="Cart" class="navItem"><i class="material-icons">shopping_cart</i></a></li>
           <li><a href="/login"  title="Login / SignUp" class="navItem"><i class="material-icons">fingerprint</i></a></li>
         </ul>
 
         <form id="form1" class="hide-on-med-and-down" >
-          <div class="input-field" style="max-width: 73vw;">
-            <input id="search" type="search" required placeholder="Search for Products" onblur="clearText()">
+          <div class="input-field" style="max-width: 67vw">
+            <input id="search deskbar" type="search" required placeholder="Search for Products" title="Search for Products" onblur="clearText()">
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
             <div id="searchResults" ></div>
@@ -55,7 +56,7 @@
     <nav class=" nav-wrapper header hide-on-large-only no-shadows" id="mobile-search-bar">
     <form id="form2" class="show-on-med-and-down">
           <div class="input-field" >
-            <input id="search-mobile" type="search" required placeholder="Search for Products" onblur="clearText()">
+            <input id="search-mobile" type="search" required placeholder="Search for Products" title="Search for Products" onblur="clearText()">
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
             <div id="searchResults" ></div>
@@ -81,6 +82,10 @@
   </div>
 </div>
 
+<div id="content">
+  @yield('content')
+</div>
+
 
 
   <script>
@@ -97,6 +102,7 @@
 
   </script>
 </body>
+
 </html>
 
 <!-- 

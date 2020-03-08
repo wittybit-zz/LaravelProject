@@ -32,6 +32,14 @@ body{
     color:#ffffff!important;
   }
 
+  .brand-logo{
+    margin-left: 10px;
+  }
+
+  .deskbar{
+    display:block;
+  }
+
   .waves-effect.waves-accent .waves-ripple {
   /* The alpha value allows the text and background color
   of the button to still show through. */
