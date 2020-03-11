@@ -1,65 +1,93 @@
-/* No CSS *//*# sourceMappingURL=app.css.map */
+/* No CSS */
+/*# sourceMappingURL=app.css.map */
+:root {
+    --primary: #560027;
+    --primary-light: #bc477b;
+    --accent: #102027;
+    --accent-light: #62727b;
+}
 
-body{
+body {
     background: #F3F3F3;
-  }
+}
 
-  #sidenav{
+#sidenav {
     background: #252525;
-    color:#ffffff;
-  }
+    color: #ffffff;
+}
 
-  .header{
-    background:#252525;
-    color:#ffffff!important;
-  }
+.header {
+    background: #252525;
+    color: #ffffff !important;
+}
 
 
-  .search{
-    background:#252525;
-  }
+.search {
+    background: #252525;
+}
 
-  .accent{
-    background:#8664C3;
-    color:#ffffff;
-  }
+.accent {
+    background: #8664C3;
+    color: #ffffff;
+}
 
-  .navItem:hover{
-    background:#8664C3;
-  }
+.navItem:hover {
+    background: #8664C3;
+}
 
-  .icon-white{
-    color:#ffffff!important;
-  }
+.icon-white {
+    color: #ffffff !important;
+}
 
-  .brand-logo{
+.brand-logo {
     margin-left: 10px;
-  }
+}
 
-  .deskbar{
-    display:block;
-  }
+.deskbar {
+    display: block;
+}
 
-  .waves-effect.waves-accent .waves-ripple {
-  /* The alpha value allows the text and background color
+.waves-effect.waves-accent .waves-ripple {
+    /* The alpha value allows the text and background color
   of the button to still show through. */
-  background-color: rgba(134, 100, 195, 0.65);
-  }
+    background-color: rgba(134, 100, 195, 0.65);
+}
 
-  #mobile-search-bar{
-    margin-top:0px;
-  }
+#mobile-search-bar {
+    margin-top: 0px;
+}
 
-  #form1{
-    margin-left:10vw;
-  }
+#form1 {
+    margin-left: 10vw;
+}
 
-  .no-shadows {
-    box-shadow: none!important;
-  }
+.no-shadows {
+    box-shadow: none !important;
+}
 
-  .one-edge-shadow {
-      -webkit-box-shadow: 0 8px 6px -6px black;
-      -moz-box-shadow: 0 8px 6px -6px black;
-      box-shadow: 0 8px 6px -6px black;
-  }
+.one-edge-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.primary {
+    background: var(--primary) !important;
+}
+
+.primary-light {
+    background-color: var(--primary-light) !important;
+}
+
+.accent {
+    background: var(--accent) !important;
+}
+
+.accent-light {
+    background-color: var(--accent-light) !important;
+}
+
+.btn {
+    border-radius: 10px;
+    font-weight: bold;
+}

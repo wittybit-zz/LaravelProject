@@ -18,15 +18,15 @@
     .input-field input[type=text]:focus + label,
     .input-field input[type=email]:focus + label,
     .input-field input[type=password]:focus + label {
-      color: #eb1e63;
+      color :var(--primary) !important;
     }
 
     .input-field input[type=date]:focus,
     .input-field input[type=text]:focus,
     .input-field input[type=email]:focus,
     .input-field input[type=password]:focus {
-      border-bottom: 2px solid #eb1e63;
-      box-shadow: none;
+      border-bottom: 1px solid var(--primary) !important;
+      box-shadow: none !important;
     }
   </style>
 
@@ -46,6 +46,7 @@
           <form class="col s12" method="post">
             <div class='row'>
               <div class='col s12'>
+                <h5>Signup</h5>
               </div>
             </div>
 
@@ -73,7 +74,7 @@
             </div>
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Create Account</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect accent'>Create Account</button>
               </div>
             </center>
           </form>
