@@ -23,4 +23,5 @@ Route::get('/home','NavController@home');
 Route::get('/categories','NavController@categories');
 Route::get('/cart','NavController@cart');
 Route::get('/login','NavController@login');
+Route::get('/signup','NavController@signup');
 Route::get('/checkout','NavController@checkout');

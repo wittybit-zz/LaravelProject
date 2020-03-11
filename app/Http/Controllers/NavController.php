@@ -32,6 +32,11 @@ class NavController extends Controller
         return view('login');
     }
 
+    public function signup()
+    {
+        return view('signup');
+    }
+
     public function checkout()
     {
         return view('checkout');

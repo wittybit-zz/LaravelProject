@@ -51,7 +51,6 @@
           </div>
         </form>
       </div>
-      
         
     <nav class=" nav-wrapper header hide-on-large-only no-shadows" id="mobile-search-bar">
     <form id="form2" class="show-on-med-and-down">
@@ -94,6 +93,7 @@
 </div>
 
 <div id="content">
+  <div class="hide-on-large-only" style="margin:30px 0;"></div>
   @yield('content')
 </div>
 

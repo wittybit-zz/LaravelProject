@@ -37,7 +37,7 @@
     <center>
       <div class="section"></div>
 
-      <h5 class="indigo-text">Please, login into your account</h5>
+      <h5 class="indigo-text">To keep connected with us, Signup with your personal details</h5>
       <div class="section"></div>
 
       <div class="container">
@@ -50,32 +50,36 @@
             </div>
 
             <div class='row'>
+              <div class='input-field col s6'>
+                <input class='validate' type='text' name='email' id='fname' />
+                <label for='fname'>First Name</label>
+              </div>
+              <div class='input-field col s6'>
+                <input class='validate' type='text' name='email' id='lname' />
+                <label for='lname'>Last Name</label>
+              </div>
               <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' />
                 <label for='email'>Enter your email</label>
               </div>
-            </div>
-
-            <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Enter your password</label>
               </div>
-              <label style='float: right;'>
-								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>
-							</label>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password' id='cpassword' />
+                <label for='cpassword'>Confirm your password</label>
+              </div>
             </div>
-
-            <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Create Account</button>
               </div>
             </center>
           </form>
         </div>
       </div>
-      <a href="signup">Create account</a>
+      Already a user ? <a href="/login">Login </a>
     </center>
   </main>
     @endsection
