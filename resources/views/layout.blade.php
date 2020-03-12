@@ -66,10 +66,19 @@
     <ul class="sidenav header" id="mobile-demo">
       <li class="accent" style="padding-top: 10px;">
         <div class="container" style="font-size:18px">
+          @if(true)
           <i style="font-size: 48px;margin:0" class="large material-icons row">account_box</i>
           <div style="width: 100%" class="waves-effect row">
             <span class="col s10">Hello, User</span><span style="padding-top: 10px;" class="col s1 material-icons">arrow_forward</span>
           </div>
+          @else
+          <div style="width: 100%" class="row">
+            <div class="row">
+            <button class="btn indigo darken-1 col s5 waves-effect" onclick="location.href='/login'">Login</button>
+            <button class="btn indigo lighten-4 col s6 offset-s1 waves-effect grey-text text-darken-4" onclick="location.href='/signup'">Register</button>
+            </div>
+          </div>
+          @endif
         </div>
       </li>
           <li><a href="/home" class="waves-effect waves-accent icon-white">Home<i class="material-icons icon-white">home</i></a></li>

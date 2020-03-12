@@ -86,8 +86,3 @@ body {
 .accent-light {
     background-color: var(--accent-light) !important;
 }
-
-.btn {
-    border-radius: 10px;
-    font-weight: bold;
-}

@@ -22,15 +22,15 @@
     .input-field input[type=text]:focus + label,
     .input-field input[type=email]:focus + label,
     .input-field input[type=password]:focus + label {
-      color: #eb1e63;
+      color :var(--primary) !important;
     }
 
     .input-field input[type=date]:focus,
     .input-field input[type=text]:focus,
     .input-field input[type=email]:focus,
     .input-field input[type=password]:focus {
-      border-bottom: 2px solid #eb1e63;
-      box-shadow: none;
+      border-bottom: 1px solid var(--primary) !important;
+      box-shadow: none !important;
     }
   </style>
 
@@ -74,7 +74,7 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect primary'>Login</button>
               </div>
             </center>
           </form>
