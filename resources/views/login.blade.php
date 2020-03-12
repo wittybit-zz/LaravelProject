@@ -74,7 +74,11 @@
             <br />
             <center>
               <div class='row'>
+<<<<<<< HEAD
                 <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect primary'>Login</button>
+=======
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect accent'>Login</button>
+>>>>>>> 6b6fc1039b250c32964a8912d56f50053c383a5d
               </div>
             </center>
           </form>

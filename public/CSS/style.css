@@ -3,12 +3,16 @@
 :root {
     --primary: #560027;
     --primary-light: #bc477b;
-    --accent: #102027;
-    --accent-light: #62727b;
+    --accent: #8664C3;
+    --accent-light: rgb(191, 157, 255);
 }
 
 body {
     background: #F3F3F3;
+}
+
+.img-fix{
+    width:18vw;
 }
 
 #sidenav {
