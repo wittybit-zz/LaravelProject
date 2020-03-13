@@ -24,7 +24,7 @@
     @section('title','Categories')
     @section('content')
         <h5 class="card-title">Categories Page</h5>
-        <div class="carousel carousel-slider center" style="width: 95vw;margin:auto">
+        <div class="carousel carousel-slider center" style="width: 97vw;margin:auto">
     <div class="carousel-fixed-item center">
       <a class="btn waves-effect white grey-text darken-text-2">button</a>
     </div>
