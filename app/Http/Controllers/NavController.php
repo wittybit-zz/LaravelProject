@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class NavController extends Controller
 {
@@ -19,7 +20,9 @@ class NavController extends Controller
 
     public function categories()
     {
-        return view('categories');
+        $request = Request::create('api/categories', 'GET');
+        $response = Route::dispatch($request);
+        return view('categories',['data'=>$response->original]);
     }
 
     public function cart()

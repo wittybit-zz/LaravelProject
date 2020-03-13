@@ -1,130 +1,74 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+<div class="indigo lighten-5">
+    <style type="text/css">
+        .card-image{
+            height: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .card .card-content{
+            padding: 12px !important;
+        }
+        .card-image img{
+            transform: scale(1.5);
+            position: absolute;
+        }
+        @media only screen and (max-width: 600px) {
+          .card-image{
+            max-height: 100px;
+            overflow: hidden;
+        }
+        }
+    </style>
     @extends('layout')
     @section('title','Categories')
     @section('content')
-        <h1>Categories Page</h1>
+        <h5 class="card-title">Categories Page</h5>
+        <div class="carousel carousel-slider center" style="width: 95vw;margin:auto">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
         <div class="row">
-
+            @foreach($data as $item)
             <div class="col l3 m4 s6 display-card">
                 <a href="signup.html" target="_blank" class="nav-link">
                 <div class="card cardHover">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img  img-fix src="{{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
+                        <img img-fix src="{{$item['link']}}" alt="image">
                     </div>
-                    <div class="card-content">
-                        <span class="flow-text activator text-darken-4">
-                            Apparel
-                        </span>
+                    <div class="card-content black-text">
+                        {{$item['name']}}
                     </div>
-                </div>      
-            </div><!--ending column-->
-
-            <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
-                <div class="card cardHover">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img  img-fix src="{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
-                    </div>
-                    <div class="card-content">
-                        <span class="flow-text activator text-darken-4">
-                            Books
-                        </span>
-                    </div>
-                </div>      
-            </div><!--ending column-->
-
-            <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
-                <div class="card cardHover">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator img-fix" src="{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
-                    </div>
-                    <div class="card-content">
-                        <span class="flow-text activator text-darken-4">
-                            Electronics
-                        </span>
-                    </div>
-                </div>      
-            </div><!--ending column-->
-
-            <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
-                <div class="card cardHover">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img  img-fix src="{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
-                    </div>
-                    <div class="card-content">
-                        <span class="activator text-darken-4 flow-text">
-                            Fitness
-                        </span>
-                    </div>
-                </div>      
-            </div><!--ending column-->
-
-            <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
-                <div class="card cardHover">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img  img-fix src="{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
-                    </div>
-                    <div class="card-content">
-                        <span class="flow-text activator text-darken-4">
-                            Furniture
-                        </span>
-                    </div>
-                </div>      
-            </div><!--ending column-->
-
-            <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
-                <div class="card cardHover">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img  img-fix src="{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
-                    </div>
-                    <div class="card-content">
-                        <span class="flow-text activator text-darken-4">
-                            Clothing
-                        </span>
-                    </div>
-                </div>      
-            </div><!--ending column-->
-
-            <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
-                <div class="card cardHover">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img  img-fix src="{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
-                    </div>
-                    <div class="card-content">
-                        <span class="flow-text activator text-darken-4">
-                            Clothing
-                        </span>
-                    </div>
-                </div>      
-            </div><!--ending column-->
-
-            <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
-                <div class="card cardHover">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img  img-fix src="{URL('https://source.unsplash.com/random/500x500')}}" alt="image">
-                    </div>
-                    <div class="card-content">
-                        <span class="flow-text activator text-darken-4">
-                            Clothing
-                        </span>
-                    </div>
-                </div>      
-            </div><!--ending column-->
-
+                </div> 
+                </a>     
+            </div>
+            @endforeach
         </div><!--ending row-->
     @endsection
-</body>
-</html>
+    <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {
+        fullWidth: true,
+    indicators: true
+    });
+  });
+    </script>
+</div>
