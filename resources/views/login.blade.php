@@ -32,20 +32,36 @@
       border-bottom: 1px solid var(--primary) !important;
       box-shadow: none !important;
     }
-  </style>
 
-    @extends('layout')
-    @section('title','Signup / Login')
-    @section('content')
+    .fixed-action-btn{
+      display:none;
+    }
+
+    .signup-box{
+      padding: 32px 48px 0px 48px; 
+      border: 1px solid #EEE;  
+      width:70vmin;
+    }
+
+    
+  </style>
+    <head>
+    <title>Login</title>
+    </head>
+    @include('layout')
+    @extends('animatedBG')
+    @section('page')
+    
+    
   <main>
     <center>
       <div class="section"></div>
 
-      <h5 class="indigo-text">Please, login into your account</h5>
+      <h5 class="white-text">Please, login into your account</h5>
       <div class="section"></div>
 
       <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <div class="z-depth-1 grey lighten-4 row signup-box">
 
           <form class="col s12" method="post">
             <div class='row'>
