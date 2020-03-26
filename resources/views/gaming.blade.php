@@ -13,10 +13,21 @@
     padding: 12px !important;
   }
 
+  .made-responsive{
+    font-size:5vmin!important;
+  } 
+  /* added custom css */
+
+  .card-action{
+    font-size:3vmin;
+  }
+  /* added custom css */
+
   .card-image img {
     transform: scale(1.5);
     position: absolute;
   }
+
 
   @media only screen and (max-width: 600px) {
     .card-image {
@@ -24,6 +35,17 @@
       overflow: hidden;
     }
   }
+
+  .display-card{
+    height:400px;
+  }
+
+  .description{
+    font-size:3vmin!important;
+  }
+  /* added custom css */
+
+
 </style>
 <div class="row">
   @foreach($data as $item)
@@ -45,16 +67,17 @@
         <img img-fix class="activator" src="{{$item['link']}}">
       </div>
       <div class="card-content black-text">
-        <span class="card-title activator grey-text text-darken-4">{{$item['name']}}<i class="material-icons right">more_vert</i></span>
+        <span class="card-title activator grey-text text-darken-4 made-responsive">{{$item['name']}}</span>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+          <!-- <a href="#">This is a link</a> -->
+        </div>
       </div>
 
-      <div class="card-action">
-        <a href="#">This is a link</a>
-        <!-- <a href="#">This is a link</a> -->
-      </div>
+
 
       <div class="card-reveal" style="display: none; transform: translateY(0%);">
-        <span class="card-title grey-text text-darken-4">{{$item['name']}}<i class="material-icons right">close</i></span>
+        <span class="card-title grey-text text-darken-4 description">{{$item['name']}}<i class="material-icons right">close</i></span>
         <p>{{$item['description']}}</p>
       </div>
     </div>
