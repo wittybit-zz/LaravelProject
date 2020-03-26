@@ -102,7 +102,7 @@
 </div>
 
 <div id="content">
-  <div class="hide-on-large-only" style="margin:30px 0;padding: 10px"></div>
+  <div class="hide-on-large-only" style="margin:18px 0;padding: 10px"></div>
   @yield('content')
 </div>
 
