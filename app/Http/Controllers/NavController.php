@@ -22,7 +22,7 @@ class NavController extends Controller
     {
         $request = Request::create('api/categories', 'GET');
         $response = Route::dispatch($request);
-        return view('categories',['data'=>$response->original]);
+        return view('categories',['category'=>$response->original]);
     }
 
     public function cart()
@@ -44,4 +44,54 @@ class NavController extends Controller
     {
         return view('checkout');
     }
+
+    public function Apparel()
+    {
+        return view('apparel');
+    }
+
+    public function Books()
+    {
+        return view('books');
+    }
+
+    public function Cooks()
+    {
+        return view('cosmetics');
+    }
+
+    public function Electronics()
+    {
+        return view('electronics');
+    }
+
+    public function Fitness()
+    {
+        return view('fitness');
+    }
+
+    public function Furniture()
+    {
+        return view('furniture');
+    }
+
+    public function Gaming()
+    {
+        $request = Request::create('api/categories/Gaming', 'GET');
+        $response = Route::dispatch($request);
+        return view('gaming',['data'=>$response->original]);
+    }
+
+    public function Music()
+    {
+        return view('music');
+    }
+
+    // public function inGaming()
+    // {
+    //     $request = Request::create('api/categories/Gaming', 'GET');
+    //     $response = Route::dispatch($request);
+    //     return view('categories/Gaming',['data'=>$response->original]);
+    // }
+    
 }
