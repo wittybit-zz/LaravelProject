@@ -55,3 +55,63 @@ Route::get('/categories',function(){
 
 	];
 });
+
+Route::get('/categories/Gaming',function(){
+return[
+	[
+		'name'=>'Nintendo Switch',
+		'link'=>'https://source.unsplash.com/dF2HZ-Kg34w/600x400',
+		'description'=>'The latest console from Nintendo',
+		'o_price'=>'555',
+		'c_price'=>'555',
+	],
+	[
+		'name'=>'Play Station 4',
+		'link'=>'https://source.unsplash.com/ePJUCF48vgo/600x400',
+		'description'=>'The most selling console on the planet',
+		'o_price'=>'222',
+		'c_price'=>'221',
+	],
+	[
+		'name'=>'XBox One X',
+		'link'=>'https://source.unsplash.com/P1CJmbRIfSk/600x400',
+		'description'=>'The most selling console on the planet',
+		'o_price'=>'522',
+		'c_price'=>'291',
+	],
+	[
+		'name'=>'Desktop Gaming',
+		'link'=>'https://source.unsplash.com/TErYPw4o1KM/600x400',
+		'description'=>'Welcome to the master race',
+		'o_price'=>'999',
+		'c_price'=>'599',
+	]
+];
+
+});
+
+Route::get('/categories/Apparel',function(){
+return[
+	[
+		'name'=>'Nintendo Switch',
+		'link'=>'https://source.unsplash.com/dF2HZ-Kg34w/600x400',
+		'description'=>'The latest console from Nintendo'
+	],
+	[
+		'name'=>'Play Station 4',
+		'link'=>'https://source.unsplash.com/ePJUCF48vgo/600x400',
+		'description'=>'The most selling console on the planet'
+	],
+	[
+		'name'=>'XBox One X',
+		'link'=>'https://source.unsplash.com/P1CJmbRIfSk/600x400',
+		'description'=>'The most selling console on the planet'
+	],
+	[
+		'name'=>'Desktop Gaming',
+		'link'=>'https://source.unsplash.com/TErYPw4o1KM/600x400',
+		'description'=>'Welcome to the master race'
+	]
+];
+
+});
