@@ -122,7 +122,7 @@ $('#nextBtn').click(function(){
   @section('title','Categories')
   @section('content')
 
-  <div class="carousel carousel-slider center" style="width: 97vw;margin:auto">
+  <div class="carousel carousel-slider center" style="width: 97vw;margin:auto; margin-top:25px;">
     <div class="carousel-fixed-item center">
       <a class="btn waves-effect white grey-text darken-text-2">button</a>
     </div>

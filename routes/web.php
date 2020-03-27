@@ -38,3 +38,5 @@ Route::group(["prefix"=>"categories"], function() {
     Route::get("/Gaming","NavController@Gaming");
     Route::get("/Music","NavController@Music");
 });
+
+//Route::view('/animate','animatedBG');

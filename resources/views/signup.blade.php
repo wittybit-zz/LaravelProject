@@ -28,20 +28,29 @@
       border-bottom: 1px solid var(--primary) !important;
       box-shadow: none !important;
     }
-  </style>
 
-    @extends('layout')
-    @section('title','Signup / Login')
-    @section('content')
+    .fixed-action-btn{
+      display: none;
+    }
+
+    .signup-box{
+      display: inline-block;
+      padding: 32px 48px 0px 48px;
+      border: 1px solid #EEE;
+    }
+  </style>
+    @include('layout')
+    @extends('animatedBG')
+    @section('page')
   <main>
     <center>
       <div class="section"></div>
 
-      <h5 class="indigo-text">To keep connected with us, Signup with your personal details</h5>
+      <h5 class="white-text">To keep connected with us, Signup with your personal details</h5>
       <div class="section"></div>
 
       <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <div class="z-depth-1 grey lighten-4 row signup-box">
 
           <form class="col s12" method="post">
             <div class='row'>
@@ -80,7 +89,7 @@
           </form>
         </div>
       </div>
-      Already a user ? <a href="/login">Login </a>
+      <h6>Already a user ? <a href="/login">Login </a></h2>
     </center>
   </main>
     @endsection
