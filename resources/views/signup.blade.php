@@ -18,7 +18,7 @@
     .input-field input[type=text]:focus + label,
     .input-field input[type=email]:focus + label,
     .input-field input[type=password]:focus + label {
-      color :var(--primary) !important;
+      color :var(--accent) !important;
     }
 
     .input-field input[type=date]:focus,
