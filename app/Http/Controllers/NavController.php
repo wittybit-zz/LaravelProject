@@ -29,10 +29,18 @@ class NavController extends Controller
     {
         return view('cart');
     }
+    public function authenticate(Request $request){
+        echo "AS";
+    }
 
     public function login()
     {
         return view('login');
+    }
+
+    public function contact()
+    {
+        return view('contact');
     }
 
     public function signup()

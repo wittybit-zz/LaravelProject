@@ -11,8 +11,8 @@ body {
     background: #F3F3F3;
 }
 
-.img-fix{
-    width:18vw;
+.img-fix {
+    width: 18vw;
 }
 
 #sidenav {
@@ -89,4 +89,51 @@ body {
 
 .accent-light {
     background-color: var(--accent-light) !important;
+}
+
+/* 
+paddings
+ */
+.p2 {
+    padding: 10px;
+}
+
+.my-1 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.my-2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.my-3 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.mt-1 {
+    margin-top: 3px;
+}
+
+.mt-2 {
+    margin-top: 5px;
+}
+
+.mt-3 {
+    margin-top: 7px;
+}
+
+
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width:600px) {
+    .d-flex {
+        flex-direction: column;
+    }
 }

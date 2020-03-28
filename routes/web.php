@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Header');
+    return view('layout');
 });
 
 Route::view('/Header','layout');
@@ -25,6 +25,8 @@ Route::get('/cart','NavController@cart');
 Route::get('/login','NavController@login');
 Route::get('/signup','NavController@signup');
 Route::get('/checkout','NavController@checkout');
+Route::get('/contact','NavController@contact');
+Route::get('/authenticate','NavController@authenticate');
 // Route::view('/categories/{?}','{?}');
 
 Route::group(["prefix"=>"categories"], function() {

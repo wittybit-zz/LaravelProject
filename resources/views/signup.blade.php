@@ -52,7 +52,7 @@
       <div class="container">
         <div class="z-depth-1 grey lighten-4 row signup-box">
 
-          <form class="col s12" method="post">
+          <form class="col s12" method="post" action="/api/register">
             <div class='row'>
               <div class='col s12'>
                 <h5>Signup</h5>
@@ -61,11 +61,11 @@
 
             <div class='row'>
               <div class='input-field col s6'>
-                <input class='validate' type='text' name='email' id='fname' />
+                <input class='validate' type='text' name='fname' id='fname' />
                 <label for='fname'>First Name</label>
               </div>
               <div class='input-field col s6'>
-                <input class='validate' type='text' name='email' id='lname' />
+                <input class='validate' type='text' name='lname' id='lname' />
                 <label for='lname'>Last Name</label>
               </div>
               <div class='input-field col s12'>
@@ -77,7 +77,7 @@
                 <label for='password'>Enter your password</label>
               </div>
               <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='cpassword' />
+                <input class='validate' type='password' name='cpassword' id='cpassword' />
                 <label for='cpassword'>Confirm your password</label>
               </div>
             </div>

@@ -61,7 +61,7 @@
         <div class="row">
             @foreach($data as $item)
             <div class="col l3 m4 s6 display-card">
-                <a href="signup.html" target="_blank" class="nav-link">
+                <a href="signup.html" class="nav-link">
                 <div class="card cardHover">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img img-fix src="{{$item['link']}}" alt="image">
@@ -122,9 +122,9 @@ $('#nextBtn').click(function(){
   @section('title','Categories')
   @section('content')
 
-  <div class="carousel carousel-slider center" style="width: 97vw;margin:auto; margin-top:25px;">
+  <div class="carousel carousel-slider center" style="width: 97vw;margin:auto">
     <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+      <a class="btn waves-effect indigo white-text darken-text-2">Explore</a>
     </div>
     <div class="carousel-item red white-text" href="#one!">
       <h2>First Panel</h2>
@@ -146,7 +146,7 @@ $('#nextBtn').click(function(){
   <div class="row">
     @foreach($category as $item)
     <div class="col l3 m4 s6 display-card">
-      <a href="/categories/{{$item['name']}}" target="_blank" class="nav-link">
+      <a href="/categories/{{$item['name']}}" class="nav-link">
         <div class="card cardHover">
           <div class="card-image waves-effect waves-block waves-light">
             <img img-fix src="{{$item['link']}}" alt="image">

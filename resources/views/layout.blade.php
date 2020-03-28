@@ -23,7 +23,17 @@
     <link rel="stylesheet" href="{{ URL::asset('CSS/style.css') }}" />
 
     <title>@yield('title','Layout')</title>
-    
+    <style type="text/css">
+       #form1 .label-icon i{
+        margin-top:50%;
+        transform: translateY(-25%);
+      } 
+      #form1 .input-field{
+        height: 55px;
+        top:50%;
+        transform:translateY(-50%);
+      }
+    </style>
     
 
 </head>
@@ -40,6 +50,7 @@
           <li><a href="/categories"  title="Categories" class="navItem"><i class="material-icons">format_list_bulleted</i></a></li>
           <li><a href="/cart" title="Cart" class="navItem"><i class="material-icons">shopping_cart</i></a></li>
           <li><a href="/login"  title="Login / SignUp" class="navItem"><i class="material-icons">fingerprint</i></a></li>
+          <li><a href="/contact"  title="Contact" class="navItem"><i class="material-icons">call</i></a></li>
         </ul>
 
         <form id="form1" class="hide-on-med-and-down" >
@@ -86,7 +97,7 @@
           <li><a href="/cart" class="waves-effect waves-accent icon-white">Cart<i class="material-icons icon-white">shopping_cart</i></a></li>
           <li><a href="/login" class="waves-effect waves-accent icon-white">Login<i class="material-icons icon-white">fingerprint</i></a></li>
           <hr>
-          <li><a href="/cart" class="waves-effect waves-accent icon-white">Contact Us<i class="material-icons icon-white">email</i></a></li>
+          <li><a href="/contact" class="waves-effect waves-accent icon-white">Contact Us<i class="material-icons icon-white">email</i></a></li>
           <li><a href="/login" class="waves-effect waves-accent icon-white">FAQs<i class="material-icons icon-white">question_answer</i></a></li>
     </ul>
 

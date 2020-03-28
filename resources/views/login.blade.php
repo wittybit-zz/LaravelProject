@@ -63,7 +63,7 @@
       <div class="container">
         <div class="z-depth-1 grey lighten-4 row signup-box">
 
-          <form class="col s12" method="post">
+          <form class="col s12" method="post" action="/authenticate">
             <div class='row'>
               <div class='col s12'>
                 <h5>Login</h5>
