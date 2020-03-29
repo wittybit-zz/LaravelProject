@@ -65,9 +65,12 @@
                 <label for='fname'>First Name</label>
               </div>
               <div class='input-field col s6'>
-                <input class='validate' type='text' name='lname' id='lname' />
+                <input class='' type='text' name='lname' id='lname' />
                 <label for='lname'>Last Name</label>
               </div>
+              @error('lname')
+                {{$message}}
+              @enderror
               <div class='input-field col s12'>
                 <input class='validate' type='email' name='email' id='email' />
                 <label for='email'>Enter your email</label>
