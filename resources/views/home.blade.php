@@ -26,14 +26,6 @@
     		Categories
     	</h5>
     </div>
-    <a id="feature" class="fixed-action-btn waves-effect waves-light btn btn-floating" ><i class="material-icons">menu</i></a>
-
-     <div class="tap-target" data-target="feature">
-    <div class="tap-target-content">
-      <h5>Title</h5>
-      <p>A bunch of text</p>
-    </div>
-  	</div>
 @endsection
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
