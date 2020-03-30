@@ -15,14 +15,18 @@ class NavController extends Controller
 
     public function home()
     {
-        return view('home');
+        return view('home',['category'=>$this->getCategories()]);
     }
 
     public function categories()
     {
+        return view('categories',['category'=>$this->getCategories()]);
+    }
+
+    function getCategories(){
         $request = Request::create('api/categories', 'GET');
         $response = Route::dispatch($request);
-        return view('categories',['category'=>$response->original]);
+        return $response->original;
     }
 
     public function cart()

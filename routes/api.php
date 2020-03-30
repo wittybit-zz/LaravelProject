@@ -34,35 +34,43 @@ Route::get('/categories',function(){
 	return [
 		[
 			'name'=>'Cosmetics',
-		    'link'=>'https://source.unsplash.com/collection/9686758/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686758/',
+		    'path'=>'/categories/cosmetics'
 		],
 		[
 			'name'=>'Electronics',
-		    'link'=>'https://source.unsplash.com/collection/9686744/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686744/',
+		    'path'=>'/categories/electronics'
 		],
 		[
 			'name'=>'Apparel',
-		    'link'=>'https://source.unsplash.com/collection/9686714/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686714/',
+		    'path'=>'/categories/apparel'
 		],
 		[
 			'name'=>'Books',
-		    'link'=>'https://source.unsplash.com/collection/9686719/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686719/',
+		    'path'=>'/categories/books'
 		],
 		[
 			'name'=>'Fitness',
-		    'link'=>'https://source.unsplash.com/collection/9686748/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686748/',
+		    'path'=>'/categories/fitness'
 		],
 		[
 			'name'=>'Furniture',
-		    'link'=>'https://source.unsplash.com/collection/9686739/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686739/',
+		    'path'=>'/categories/furniture'
 		],
 		[
 			'name'=>'Gaming',
-		    'link'=>'https://source.unsplash.com/collection/9686727/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686727/',
+		    'path'=>'/categories/gaming'
 		],
 		[
 			'name'=>'Music',
-		    'link'=>'https://source.unsplash.com/collection/9686768/200x150'
+		    'link'=>'https://source.unsplash.com/collection/9686768/',
+		    'path'=>'/categories/music'
 		],
 
 	];

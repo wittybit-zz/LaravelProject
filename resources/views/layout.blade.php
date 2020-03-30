@@ -97,7 +97,6 @@
           <li><a href="/home" class="waves-effect waves-accent icon-white">Home<i class="material-icons icon-white">home</i></a></li>
           <li><a href="/categories" class="waves-effect waves-accent icon-white">Categories<i class="material-icons icon-white">format_list_bulleted</i></a></li>
           <li><a href="/cart" class="waves-effect waves-accent icon-white">Cart<i class="material-icons icon-white">shopping_cart</i></a></li>
-          <li><a href="/login" class="waves-effect waves-accent icon-white">Login<i class="material-icons icon-white">fingerprint</i></a></li>
           <hr>
           <li><a href="/contact" class="waves-effect waves-accent icon-white">Contact Us<i class="material-icons icon-white">email</i></a></li>
           <li><a href="/login" class="waves-effect waves-accent icon-white">FAQs<i class="material-icons icon-white">question_answer</i></a></li>

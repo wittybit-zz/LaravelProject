@@ -17,7 +17,7 @@ Route::view('/','layout');
 
 Route::view('/Header','layout');
 
-Route::view('/home','home');
+Route::get('/home','NavController@home');
 Route::get('/categories','NavController@categories');
 Route::view('/cart','cart');
 Route::view('/login','login');
@@ -30,14 +30,14 @@ Route::get('/logout','userController@removeSession');
 
 Route::group(["prefix"=>"categories"], function() {
     Route::get("/","NavController@categories");
-    Route::get("/Apparel","NavController@Apparel");
-    Route::get("/Books","NavController@Books");
-    Route::get("/Cosmetics","NavController@Cosmetics");
-    Route::get("/Electronics","NavController@Electronics");
-    Route::get("/Fitness","NavController@Fitness");
-    Route::get("/Furniture","NavController@Furniture");
-    Route::get("/Gaming","NavController@Gaming");
-    Route::get("/Music","NavController@Music");
+    Route::get("/apparel","NavController@Apparel");
+    Route::get("/books","NavController@Books");
+    Route::get("/cosmetics","NavController@Cosmetics");
+    Route::get("/electronics","NavController@Electronics");
+    Route::get("/fitness","NavController@Fitness");
+    Route::get("/furniture","NavController@Furniture");
+    Route::get("/gaming","NavController@Gaming");
+    Route::get("/music","NavController@Music");
 });
 
 //Route::view('/animate','animatedBG');
