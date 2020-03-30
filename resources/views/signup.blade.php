@@ -46,11 +46,11 @@
     <center>
       <div class="section"></div>
 
-      <h5 class="white-text">To keep connected with us, Signup with your personal details</h5>
+      <h5 class="white-text container">To keep connected with us, Signup with your personal details</h5>
       <div class="section"></div>
 
       <div class="container">
-        <div class="z-depth-1 grey lighten-4 row signup-box">
+        <div class="z-depth-1 grey lighten-4 signup-box">
 
           <form class="col s12" method="post" action="/api/register">
             <div class='row'>
@@ -86,10 +86,10 @@
                 <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect accent'>Create Account</button>
               </div>
             </center>
+            <h6>Already a user ? <a href="/login">Login </a></h2>
           </form>
         </div>
       </div>
-      <h6>Already a user ? <a href="/login">Login </a></h2>
     </center>
   </main>
     @endsection

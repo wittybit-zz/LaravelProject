@@ -13,20 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::view('/','layout');
 
 Route::view('/Header','layout');
 
-Route::get('/home','NavController@home');
+Route::view('/home','home');
 Route::get('/categories','NavController@categories');
-Route::get('/cart','NavController@cart');
-Route::get('/login','NavController@login');
-Route::get('/signup','NavController@signup');
-Route::get('/checkout','NavController@checkout');
-Route::get('/contact','NavController@contact');
-Route::get('/authenticate','NavController@authenticate');
+Route::view('/cart','cart');
+Route::view('/login','login');
+Route::view('/signup','signup');
+Route::view('/checkout','checkout');
+Route::view('/contact','contact');
+Route::post('/authenticate','userController@verifyUser');
+Route::get('/logout','userController@removeSession');
 // Route::view('/categories/{?}','{?}');
 
 Route::group(["prefix"=>"categories"], function() {

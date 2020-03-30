@@ -41,7 +41,9 @@
 <div id="navigation">
   <nav>
       <div class="nav-wrapper header">
-        <a href="/home" class="brand-logo">Logo</a>
+        <a href="/home" class="brand-logo">
+          <span>Shopper&nbsp;Street</span>
+        </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         
         
@@ -54,7 +56,7 @@
         </ul>
 
         <form id="form1" class="hide-on-med-and-down" >
-          <div class="input-field" style="max-width: 67vw">
+          <div class="input-field" style="max-width: 40vw">
             <input id="search deskbar" type="search" required placeholder="Search for Products" title="Search for Products" onblur="clearText()">
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
@@ -77,10 +79,10 @@
     <ul class="sidenav header" id="mobile-demo">
       <li class="accent" style="padding-top: 10px;">
         <div class="container" style="font-size:18px">
-          @if(false)
+          @if(session()->has('user'))
           <i style="font-size: 48px;margin:0" class="large material-icons row">account_box</i>
           <div style="width: 100%" class="waves-effect row">
-            <span class="col s10">Hello, User</span><span style="padding-top: 10px;" class="col s1 material-icons">arrow_forward</span>
+            <span class="col s10">Hello, {{session()->get('user')->name}}</span><span style="padding-top: 10px;" class="col s1 material-icons">arrow_forward</span>
           </div>
           @else
           <div style="width: 100%" class="row">
@@ -99,6 +101,10 @@
           <hr>
           <li><a href="/contact" class="waves-effect waves-accent icon-white">Contact Us<i class="material-icons icon-white">email</i></a></li>
           <li><a href="/login" class="waves-effect waves-accent icon-white">FAQs<i class="material-icons icon-white">question_answer</i></a></li>
+          <hr>
+          @if(session()->has('user'))
+          <li><a href="/logout" class="waves-effect waves-accent icon-white">Logout<i class="material-icons icon-white">exit_to_app</i></a></li>
+          @endif
     </ul>
 
     <div class="fixed-action-btn horizontal hide-on-large-only">

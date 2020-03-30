@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ URL::asset('CSS/animate.css') }}" />
 </head>
 
-<body>
+<body style="background-color: #8664c3;">
 <div class="hero"> 
   <div class="hero__title">@yield('page')</div>
   <div class="cube"></div>

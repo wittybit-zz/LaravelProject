@@ -1,5 +1,7 @@
 /* No CSS */
 /*# sourceMappingURL=app.css.map */
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+
 :root {
     --primary: #560027;
     --primary-light: #bc477b;
@@ -45,6 +47,7 @@ body {
 
 .brand-logo {
     margin-left: 10px;
+    font-family: 'Baloo 2', cursive;
 }
 
 .deskbar {
@@ -62,7 +65,7 @@ body {
 }
 
 #form1 {
-    margin-left: 10vw;
+    margin-left: 20vw;
 }
 
 .no-shadows {

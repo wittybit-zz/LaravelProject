@@ -24,6 +24,8 @@ Route::get('/users/{id}','userController@getUser');
 
 Route::post('/register','userController@createUser');
 
+Route::post('/authenticate','userController@verifyUser');
+
 Route::put('/users/{id}','userController@updateUser');
 
 Route::delete('/users/{id}','userController@deleteUser');

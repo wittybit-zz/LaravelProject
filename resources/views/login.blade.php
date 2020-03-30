@@ -38,7 +38,7 @@
     }
 
     .signup-box{
-      padding: 32px 48px 0px 48px; 
+      padding: 32px 32px 0px 32px; 
       border: 1px solid #EEE;  
       width:70vmin;
     }
@@ -57,13 +57,14 @@
     <center>
       <div class="section"></div>
 
-      <h5 class="white-text">Please, login into your account</h5>
+      <h5 class="white-text container-fluid">Please, login into your account</h5>
       <div class="section"></div>
 
-      <div class="container">
-        <div class="z-depth-1 grey lighten-4 row signup-box">
+      <div class="container-fluid">
+        <div class="z-depth-1 grey lighten-4 signup-box">
 
           <form class="col s12" method="post" action="/authenticate">
+            @csrf
             <div class='row'>
               <div class='col s12'>
                 <h5>Login</h5>
@@ -71,14 +72,14 @@
             </div>
 
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field'>
                 <input class='validate' type='email' name='email' id='email' />
                 <label for='email'>Enter your email</label>
               </div>
             </div>
 
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field'>
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Enter your password</label>
               </div>
@@ -91,12 +92,12 @@
             <center>
               <div class='row'>
                 <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect accent'>Login</button>
-              </div>
+              </div>Not a User ? <br>
+              <a href="signup">Create account</a>
             </center>
           </form>
         </div>
       </div>
-      <a href="signup">Create account</a>
     </center>
   </main>
     @endsection

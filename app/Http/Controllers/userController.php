@@ -38,6 +38,23 @@ class userController extends Controller
     	}
     }
 
+    public function verifyUser(Request $request){
+    	if(User::where('email',$request->email)->exists()){
+    		$user = User::where('email',$request->email)->where('password',$request->password)->get()->first();
+    		if(!$user){
+    			return response()->json(['message'=>'password incorrect']);
+    		}
+    		/*Create session*/
+    		$request->session()->put('user',$user);
+    		return redirect('home');
+    		/*Redirect back to the home page*/
+    		//
+    	}
+    	else{
+    		return response()->json(['message'=>'user does not exist'],400);
+    	}
+    }
+
     public function updateUser($id,Request $request){
     
     	if(User::where('id',$id)->exists()&&count($request->input())>0){
@@ -60,5 +77,10 @@ class userController extends Controller
 
     public function daleteUser($id){
     	
+    }
+
+    public function removeSession(Request $request){
+    	$request->session()->forget('user');
+    	return redirect('home');
     }
 }
