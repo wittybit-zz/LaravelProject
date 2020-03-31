@@ -15,18 +15,8 @@ class NavController extends Controller
 
     public function home()
     {
-        return view('home',['category'=>$this->getCategories()]);
-    }
-
-    public function categories()
-    {
-        return view('categories',['category'=>$this->getCategories()]);
-    }
-
-    function getCategories(){
-        $request = Request::create('api/categories', 'GET');
-        $response = Route::dispatch($request);
-        return $response->original;
+        $categories = app('App\Http\Controllers\ProductController')->getCategories();
+        return view('home',['category'=>$categories]);
     }
 
     public function cart()
@@ -52,48 +42,6 @@ class NavController extends Controller
     public function checkout()
     {
         return view('checkout');
-    }
-
-    public function Apparel()
-    {
-        return view('apparel');
-    }
-
-    public function Books()
-    {
-        return view('books');
-    }
-
-    public function Cooks()
-    {
-        return view('cosmetics');
-    }
-
-    public function Electronics()
-    {
-        return view('electronics');
-    }
-
-    public function Fitness()
-    {
-        return view('fitness');
-    }
-
-    public function Furniture()
-    {
-        return view('furniture');
-    }
-
-    public function Gaming()
-    {
-        $request = Request::create('api/categories/Gaming', 'GET');
-        $response = Route::dispatch($request);
-        return view('gaming',['data'=>$response->original]);
-    }
-
-    public function Music()
-    {
-        return view('music');
     }
 
     // public function inGaming()

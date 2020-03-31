@@ -41,10 +41,16 @@ class userController extends Controller
     }
 
     public function verifyUser(Request $request){
+    	$request->validate([
+    		'email'=>'bail|required|email',
+    		'password'=>'bail|required'
+    	],[
+    		'email.required'=>'Please fill the email'
+    	]);
     	if(User::where('email',$request->email)->exists()){
     		$user = User::where('email',$request->email)->where('password',$request->password)->get()->first();
     		if(!$user){
-    			return response()->json(['message'=>'password incorrect']);
+    			return redirect()->route('login', ['userExists' => 'Password Incorrect...'])->withInput();
     		}
     		/*Create session*/
     		$request->session()->put('user',$user);
@@ -53,7 +59,7 @@ class userController extends Controller
     		//
     	}
     	else{
-    		return response()->json(['message'=>'user does not exist'],400);
+    		return redirect()->route('login', ['userExists' => 'User not found...'])->withInput();
     	}
     }
 

@@ -39,7 +39,6 @@
       border: 1px solid #EEE;
     }
   </style>
-    @include('layout')
     @extends('animatedBG')
     @section('page')
   <main>

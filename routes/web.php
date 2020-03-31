@@ -20,7 +20,8 @@ Route::view('/Header','layout');
 Route::get('/home','NavController@home');
 Route::get('/categories','NavController@categories');
 Route::view('/cart','cart');
-Route::view('/login','login');
+Route::view('/profile','profile');
+Route::view('/login','login')->name('login');
 Route::view('/signup','signup');
 Route::view('/checkout','checkout');
 Route::view('/contact','contact');
@@ -29,15 +30,15 @@ Route::get('/logout','userController@removeSession');
 // Route::view('/categories/{?}','{?}');
 
 Route::group(["prefix"=>"categories"], function() {
-    Route::get("/","NavController@categories");
-    Route::get("/apparel","NavController@Apparel");
-    Route::get("/books","NavController@Books");
-    Route::get("/cosmetics","NavController@Cosmetics");
-    Route::get("/electronics","NavController@Electronics");
-    Route::get("/fitness","NavController@Fitness");
-    Route::get("/furniture","NavController@Furniture");
-    Route::get("/gaming","NavController@Gaming");
-    Route::get("/music","NavController@Music");
+    Route::get("/","ProductController@categories");
+    Route::get("/apparel","ProductController@Apparel");
+    Route::get("/books","ProductController@Books");
+    Route::get("/cosmetics","ProductController@Cosmetics");
+    Route::get("/electronics","ProductController@Electronics");
+    Route::get("/fitness","ProductController@Fitness");
+    Route::get("/furniture","ProductController@Furniture");
+    Route::get("/gaming","ProductController@Gaming");
+    Route::get("/music","ProductController@Music");
 });
 
 //Route::view('/animate','animatedBG');

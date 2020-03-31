@@ -122,9 +122,57 @@
   @yield('content')
 </div>
 
-
-
-  <script>
+<footer class="page-footer black">
+          <div class="container">
+            <div class="row">
+              <div class="col l3 s12">
+                <h5 class="white-text">Shopper Street</h5>
+                <p class="grey-text text-lighten-3">Absolutely. Positively. Perfect.</p>
+              </div>
+              <div class="col l5 s12">
+                <table class="white-text">
+                  <tr>
+                    <td><i class="fa fa-map-marker"></i></td>
+                    <td>Karangwaru St, Yogyakarta, Indonesia</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-phone-square"></i></td>
+                    <td>+91- 0088008800</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-envelope"></i></td>
+                    <td>support@shopperstreet.co.in</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col l4 s12 row">
+                <div class="col">
+                  <a class="btn-floating blue darken-3" href="">
+                  <i class="fa fa-facebook-f"></i>
+                </a>
+                </div>
+                <div class="col">
+                  <a class="btn-floating blue lighten-1">
+                    <i class="fa fa-twitter"></i>
+                  </a> 
+                </div>
+                <div class="col">
+                  <a class="btn-floating" 
+                   style="background: linear-gradient(to top,yellow,purple)"   >
+                  <i class="fa fa-instagram"></i>
+                </a>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="footer-copyright center">
+            <div class="container">
+            © 2019 All rights reserved <kbd>shopperstreet.com</kbd>
+            </div>
+          </div>
+        </footer>
+<script>
     $(document).ready(function(){
         $('.sidenav').sidenav();
         $('.fixed-action-btn').floatingActionButton();
@@ -138,7 +186,6 @@
 
   </script>
 </body>
-
 </html>
 
 <!-- 
