@@ -84,6 +84,9 @@ return[
 		'description'=>'The latest console from Nintendo',
 		'o_price'=>'555',
 		'c_price'=>'555',
+		'thumbs'=>[
+			''
+		]
 	],
 	[
 		'name'=>'Play Station 4',
@@ -91,6 +94,9 @@ return[
 		'description'=>'The most selling console on the planet',
 		'o_price'=>'222',
 		'c_price'=>'221',
+		'thumbs'=>[
+			''
+		]
 	],
 	[
 		'name'=>'XBox One X',
@@ -98,6 +104,9 @@ return[
 		'description'=>'The most selling console on the planet',
 		'o_price'=>'522',
 		'c_price'=>'291',
+		'thumbs'=>[
+			''
+		]
 	],
 	[
 		'name'=>'Desktop Gaming',
@@ -105,17 +114,26 @@ return[
 		'description'=>'Welcome to the master race',
 		'o_price'=>'999',
 		'c_price'=>'599',
+		'thumbs'=>[
+			''
+		]
 	]
 ];
 
 });
 
-Route::get('/categories/Apparel',function(){
+Route::get('/categories/Music',function(){
 return[
 	[
-		'name'=>'Footwear',
-		'link'=>'https://unsplash.com/photos/9X9gq92Ypyc/600x400',
-		'description'=>'The latest console from Nintendo'
+		'name'=>'Mi Earphone Basic',
+		'link'=>'https://images-na.ssl-images-amazon.com/images/I/3101SoWr2eL._AC_SY700_FMwebp_.jpg',
+		'description'=>'Mi Earphone Basic with Ultra deep bass and mic (Red)',
+		'thumbs'=>[
+			'https://images-na.ssl-images-amazon.com/images/I/71l4ostKUEL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71a9QT1haPL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71FTBt4aBQL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71PR0FyvriL._SL1500_.jpg'
+		]
 	],
 	[
 		'name'=>'Play Station 4',
