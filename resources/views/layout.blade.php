@@ -180,6 +180,7 @@
     $(document).ready(function(){
         $('.sidenav').sidenav();
         $('.fixed-action-btn').floatingActionButton();
+        updateCartValue();
 
     });
 
@@ -188,14 +189,14 @@
        document.getElementById("search-mobile").value="";
     }
 
-    function addItemToCart(category,id,quantity=1){
+    function addItemToCart(category,item,quantity=1){
       if(!localStorage.cart){
         localStorage.cart = "[]";
       }
       let data = JSON.parse(localStorage.cart);
-      let entry = data.find(e=>e.category==category&&e.id==id);
+      let entry = data.find(e=>e.category==category&&e.item.id==item.id);
       if(!entry){
-        data.push({category,id,quantity});
+        data.push({category,item,quantity});
         localStorage.cart = JSON.stringify(data);
         $(".cart-value").text(data.length);
         $(".cart-value").removeClass('hide');
@@ -207,7 +208,18 @@
         return false;
       }
       let data = JSON.parse(localStorage.cart);
-      return data.some(e=>e.category==category&&e.id==id)
+      return data.some(e=>e.category==category&&e.item.id==id)
+    }
+
+    function updateCartValue(){
+      if(!localStorage.cart){
+        return;
+      }
+      let data = JSON.parse(localStorage.cart);
+      if(data.length){
+        $(".cart-value").text(data.length);
+        $(".cart-value").removeClass('hide');
+      }
     }
 
   </script>
