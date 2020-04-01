@@ -62,7 +62,7 @@
 
           <form class="col s12" method="post" action="/authenticate">
             @csrf
-            <div class="blue-text">{{$userExists ?? ""}}</div>
+            <div class="blue-text">{{app('request')->userExists ?? ""}}</div>
              <div class='row'>
               <div class='col s12'>
                 <h5>Login</h5>

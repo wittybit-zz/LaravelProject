@@ -20,6 +20,7 @@ Route::view('/Header','layout');
 Route::get('/home','NavController@home');
 Route::get('/categories','NavController@categories');
 Route::view('/cart','cart');
+Route::get('/cart/add/{category}/{id}','ProductController@addItem');
 Route::view('/profile','profile');
 Route::view('/login','login')->name('login');
 Route::view('/signup','signup');
@@ -33,7 +34,7 @@ Route::group(["prefix"=>"categories"], function() {
     Route::get("/","ProductController@categories");
     Route::get("/apparel","ProductController@Apparel");
     Route::get("/books","ProductController@Books");
-    Route::get("/cosmetics","ProductController@Cosmetics");
+    Route::get("/cosmetics","ProductController@cosmetics");
     Route::get("/electronics","ProductController@Electronics");
     Route::get("/fitness","ProductController@Fitness");
     Route::get("/furniture","ProductController@Furniture");
