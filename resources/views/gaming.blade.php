@@ -91,6 +91,7 @@
     background: #fff;
   }
   .modal-content{
+    padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
   .showcase{
@@ -156,16 +157,16 @@
   @endforeach
 </div>
 <div id="modal1" class="modal modal-fixed-footer">
-  <a style="font-size: 150%;position:sticky;top:0" href="#!" class="modal-close right red btn waves-effect waves-red">&times</a>
+  <a style="font-size: 150%;position:sticky;top:0" href="#!" class="modal-close right red-text btn-flat waves-effect waves-red">
+    <i class="material-icons">close</i>
+  </a>
     <div class="modal-content center">
       <div class="showcase">
         <div class="img-container center">
-        <img loading="lazy" src="https://source.unsplash.com/random/200x200">
+       
       </div>
       <div class="details">
         <div class="thumbs">
-        <img src="https://source.unsplash.com/random/201x200">
-        <img src="https://source.unsplash.com/random/200x201">
       </div>
       <div class="hide-on-small-only">
         <h5 class="product">Product Name</h5>
@@ -191,11 +192,11 @@
       </div>
     </div>
     <div class="modal-footer">
-      <div class="hide-on-large">
+      <div class="hide-on-large-only">
         <a class="btn btn-block primary cart-add">Add to Cart</a>
       </div>
       <div class="hide-on-med-and-down">
-        <a class="btn orange darken-4 cart-add">Add to Favourites</a>
+        <a class="btn orange darken-4">Add to Favourites</a>
         <a class="btn primary cart-add">Add to Cart</a>
       </div>
     </div>
@@ -207,6 +208,7 @@
       function add(str){
         let category = "{{$category}}";
         let quantity = 1;
+        $(".quantity").text(1);
         let item = JSON.parse(str);
         let thumbs = item.thumbs
         $(".product").text(item.name)
@@ -223,7 +225,7 @@
           $(".quantity").text(quantity);
         })
         $(".cart-add").click(function(){
-          addItemToCart(category,item.id,quantity);
+          addItemToCart(category,item,quantity);
           $(".cart-add").text("Added to Cart").removeClass("primary").addClass("green");
           let html = `
           Added to Cart<a href="/cart" class="btn-flat toast-action waves-effect green-text">Go to Cart</a>
