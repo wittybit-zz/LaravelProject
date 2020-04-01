@@ -16,7 +16,8 @@ class NavController extends Controller
     public function home()
     {
         $categories = app('App\Http\Controllers\ProductController')->getCategories();
-        return view('home',['category'=>$categories]);
+        $products = app('App\Http\Controllers\ProductController')->getProducts();
+        return view('home',['category'=>$categories,'products'=>$products]);
     }
 
     public function cart()

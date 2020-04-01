@@ -23,6 +23,12 @@ class ProductController extends Controller
         return $response->original;
     }
 
+    function getProducts(){
+        $request = Request::create('api/home', 'GET');
+        $response = Route::dispatch($request);
+        return $response->original;
+    }
+
     public function Apparel()
     {
         return view('apparel');

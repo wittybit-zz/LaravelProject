@@ -30,6 +30,38 @@ Route::put('/users/{id}','userController@updateUser');
 
 Route::delete('/users/{id}','userController@deleteUser');
 
+
+Route::get('/home',function(){
+	return[
+		[
+			'name'=>'PlayStation 4',
+			'image'=>'Images/PS.jpg',
+			'heading'=>'The best-selling gaming console',
+			'link'=>'/categories/gaming'
+
+		],
+		[
+			'name'=>'Nike Sneakers',
+			'image'=>"{{ URL::asset('Images/nike.jpg') }}",
+			'heading'=>'Maximum style, maximum comfort',
+			'link'=>'/categories/apparel'
+		],
+		[
+			'name'=>'Designer Furniture',
+			'image'=>"{{ URL::asset('Images/furniture.jpg') }}",
+			'heading'=>'Make your house feel like home',
+			'link'=>'/categories/furniture'
+		],
+		[
+			'name'=>'The Honest Company',
+			'image'=>"{{ URL::asset('Images/nike.jpg') }}",
+			'heading'=>'Makeup for  every occasion',
+			'link'=>'/categories/cosmetics'
+		]
+	];
+});
+
+
 Route::get('/categories',function(){
 	return [
 		[

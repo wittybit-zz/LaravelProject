@@ -41,95 +41,87 @@
 		text-align: center;
 	}
 
-	@font-face {
-		font-family: 'Material Icons';
-		font-style: normal;
-		font-weight: 400;
-		src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
-	}
 
-	.material-icons {
-		font-family: 'Material Icons';
-		font-weight: normal;
-		font-style: normal;
-		font-size: 24px;
-		line-height: 1;
-		letter-spacing: normal;
-		text-transform: none;
-		display: inline-block;
-		white-space: nowrap;
-		word-wrap: normal;
-		direction: ltr;
-	}
+	.card-image {
+      height: 200px;
+      max-height: 200px;
+      overflow: hidden;
+      padding: 10px;
+    }
 
-	.middle-indicator {
-		position: absolute;
-		top: 50%;
-	}
+    .card .card-content {
+      padding: 12px !important;
+    }
 
-	.middle-indicator-text {
-		font-size: 4.2rem;
-	}
+    .card-image img {
+      transform: scale(1.5);
+      position: absolute;
+    }
 
-	a.middle-indicator-text {
-		color: white !important;
+    @media only screen and (max-width: 600px) {
+      .card-image {
+        max-height: 100px;
+        overflow: hidden;
+      }
 	}
+	
+	.transparent_caption{
+		background:#00000080 !important;
+		width:auto !important;
+		margin-left: 50%;
+		transform:translateX(-50%);
+		padding:20px;
+}
 
-	.content-indicator {
-		width: 64px;
-		height: 64px;
-		background: none;
-		-moz-border-radius: 50px;
-		-webkit-border-radius: 50px;
-		border-radius: 50px;
-	}
 
-	.indicators {
-		visibility: hidden;
-	}
-
-	.carouselContainer {
-		width: 97vw;
-	}
+	
 </style>
 <h5 class="center" style="text-transform: uppercase;">
 	Bestselling Products
 </h5>
-<div id="carouselContainer" class="hide-on-med-and-down">
-	<div class="carousel carousel-slider center" style="width: 97vw;margin:auto">
-		<div class="carousel-fixed-item center middle-indicator">
-			<div class="left">
-				<a href="#carouselContainer" onclick="movePrevCarousel()" class="middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
-			</div>
 
-			<div class="right">
-				<a href="#carouselContainer" onclick="moveNextCarousel()" class="middle-indicator-text waves-effect waves-light content-indicator">
-					<i class="material-icons right middle-indicator-text">chevron_right</i>
-				</a>
-			</div>
-
-			<!-- <a class="btn waves-effect indigo white-text darken-text-2">Explore</a> -->
-
-		</div>
-
-		<a class="carousel-item red white-text" href="#one!">
-			<h2>PlayStation 4</h2>
-			<p class="white-text">The best selling console on the planet</p>
-		</a>
-		<a class="carousel-item amber white-text" href="#two!">
-			<h2>Wrangler Jeans</h2>
-			<p class="white-text">The timeless classic</p>
-		</a>
-		<a class="carousel-item green white-text" href="#three!">
-			<h2>Dan Brown's Digital Fortress</h2>
-			<p class="white-text">New York Bestseller Fiction</p>
-		</a>
-		<a class="carousel-item blue white-text" href="#four!">
-			<h2>IKEA Office Table</h2>
-			<p class="white-text">For your office needs</p>
-		</a>
-	</div>
-</div>
+<div class="slider hide-on-med-and-down show-on-large" >
+        <ul class="slides">
+			@foreach($products as $product)
+            <li class="center">
+                <img src="{{ $product['image'] }}">
+                <div class="caption center">
+					<div class="transparent_caption">
+					<h3>{{$product['name']}}</h3>
+					<h5 class="light grey-text text-lighten-3">{{$product['heading']}}</h5>
+					<a class="waves-effect waves-accent btn" href="{{$product['link']}}">Explore</a>
+					</div>
+                </div>
+            </li>
+            <!-- <li>
+                <img src="{{ URL::asset('Images/nike.jpg') }}">
+                <div class="caption center-align">
+                   <div class="transparent_caption">
+				   <h3>Nike Sneakers</h3>
+					<h5 class="light grey-text text-lighten-3">Maximum style, maximum comfort</h5>
+					<a class="waves-effect waves-accent btn">Explore</a>
+				   </div>
+                </div>
+            </li>
+            <li>
+                <img src="{{ URL::asset('Images/furniture.jpg') }}">
+                <div class="caption center-align">
+                    <h3>Designer Furniture</h3>
+					<h5 class="light grey-text text-lighten-3">Make your house feel like home</h5>
+					<a class="waves-effect waves-accent btn">Explore</a>
+                </div>
+            </li>
+            <li>
+                <img src="{{ URL::asset('Images/cosmetics.jpg') }}">
+                <div class="caption center-align">
+                    <h3>The Honest Company</h3>
+					<h5 class="light grey-text text-lighten-3">Makeup for  every occasion</h5>
+					<a class="waves-effect waves-accent btn">Explore</a>
+                </div>
+			</li> -->
+			@endforeach
+        </ul>
+    </div>
 
 <div class="slider container-fluid black hide-on-med-and-up show-on-small">
 	<div class="carousel carousel-slider">
@@ -145,6 +137,29 @@
 		Categories
 	</h5>
 </div>
+
+<!-- Desktop devices -->
+<div class="row">
+    @foreach($category as $item)
+    <div class="col l4 m4 s6 display-card">
+      <a href="{{$item['path']}}" class="nav-link">
+        <div class="card cardHover">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img img-fix src="{{$item['link']}}" alt="image">
+          </div>
+          <div class="card-content black-text">
+            {{$item['name']}}
+          </div>
+        </div>
+      </a>
+    </div>
+    @endforeach
+  </div>
+
+
+
+
+<!-- Moible devices -->
 <div class="container-fluid hide-on-med-and-up show-on-small">
 	<div class="slider2 carousel carousel-slider">
 		@foreach($category as $item)
@@ -163,25 +178,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript">
 	//desktop carousel navigation function
-	document.addEventListener('DOMContentLoaded', function() {
-		var carouselElems = document.querySelector('.carousel.carousel-slider');
-		var carouselInstance = M.Carousel.init(carouselElems, {
-			fullWidth: true,
-			indicators: true
-		});
-	});
-
-	function moveNextCarousel() {
-		var elems = document.querySelector('.carousel.carousel-slider');
-		var moveRight = M.Carousel.getInstance(elems);
-		moveRight.next(1);
-	}
-
-	function movePrevCarousel() {
-		var elems = document.querySelector('.carousel.carousel-slider');
-		var moveLeft = M.Carousel.getInstance(elems);
-		moveLeft.prev(1);
-	}
+	$(document).ready(function () {
+            $('.slider').slider();
+        });
 	//mobile view carousel
 	$(document).ready(function() {
 		$('.slider2').carousel({
