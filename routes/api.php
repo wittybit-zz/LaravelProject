@@ -76,7 +76,7 @@ Route::get('/categories',function(){
 	];
 });
 
-Route::get('/categories/Gaming',function(){
+Route::get('/categories/gaming',function(){
 return[
 	[
 		'name'=>'Nintendo Switch',
@@ -122,7 +122,7 @@ return[
 
 });
 
-Route::get('/categories/Music',function(){
+Route::get('/categories/music',function(){
 return[
 	[
 		'name'=>'Mi Earphone Basic',
@@ -133,23 +133,54 @@ return[
 			'https://images-na.ssl-images-amazon.com/images/I/71a9QT1haPL._SL1500_.jpg',
 			'https://images-na.ssl-images-amazon.com/images/I/71FTBt4aBQL._SL1500_.jpg',
 			'https://images-na.ssl-images-amazon.com/images/I/71PR0FyvriL._SL1500_.jpg'
-		]
+		],
+		'o_price'=>'555',
+		'c_price'=>'555',
 	],
 	[
 		'name'=>'Play Station 4',
 		'link'=>'https://source.unsplash.com/ePJUCF48vgo/600x400',
-		'description'=>'The most selling console on the planet'
+		'description'=>'The most selling console on the planet',
+		'o_price'=>'555',
+		'c_price'=>'555',
+		'thumbs'=>[
+			'https://images-na.ssl-images-amazon.com/images/I/71l4ostKUEL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71a9QT1haPL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71FTBt4aBQL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71PR0FyvriL._SL1500_.jpg'
+		],
 	],
 	[
 		'name'=>'XBox One X',
 		'link'=>'https://source.unsplash.com/P1CJmbRIfSk/600x400',
-		'description'=>'The most selling console on the planet'
+		'description'=>'The most selling console on the planet',
+		'o_price'=>'555',
+		'c_price'=>'555',
+		'thumbs'=>[
+			'https://images-na.ssl-images-amazon.com/images/I/71l4ostKUEL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71a9QT1haPL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71FTBt4aBQL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71PR0FyvriL._SL1500_.jpg'
+		],
 	],
 	[
 		'name'=>'Desktop Gaming',
 		'link'=>'https://source.unsplash.com/TErYPw4o1KM/600x400',
-		'description'=>'Welcome to the master race'
+		'description'=>'Welcome to the master race',
+		'o_price'=>'555',
+		'c_price'=>'555',
+		'thumbs'=>[
+			'https://images-na.ssl-images-amazon.com/images/I/71l4ostKUEL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71a9QT1haPL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71FTBt4aBQL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71PR0FyvriL._SL1500_.jpg'
+		],
 	]
 ];
 
+});
+
+Route::get('/categories/cosmetics',function(){
+	include '../database/Products/db_cosmetics.php';
+	return response()->json($db_cosmetics);
 });

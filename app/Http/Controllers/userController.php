@@ -48,7 +48,7 @@ class userController extends Controller
     		'email.required'=>'Please fill the email'
     	]);
     	if(User::where('email',$request->email)->exists()){
-    		$user = User::where('email',$request->email)->where('password',$request->password)->get()->first();
+    		$user = User::where('email',$request->email)->where('password',$request->password)->first();
     		if(!$user){
     			return redirect()->route('login', ['userExists' => 'Password Incorrect...'])->withInput();
     		}

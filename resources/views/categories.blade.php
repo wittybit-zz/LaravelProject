@@ -51,7 +51,7 @@
   <div class="row">
     @foreach($category as $item)
     <div class="col l3 m4 s6 display-card">
-      <a href="/categories/{{$item['name']}}" class="nav-link">
+      <a href="{{$item['path']}}" class="nav-link">
         <div class="card cardHover">
           <div class="card-image waves-effect waves-block waves-light">
             <img img-fix src="{{$item['link']}}" alt="image">

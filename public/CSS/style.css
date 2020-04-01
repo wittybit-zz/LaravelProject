@@ -68,6 +68,20 @@ body {
     margin-left: 20vw;
 }
 
+.cart-value {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    z-index: 1;
+    padding: 5px;
+    border-radius: 50%;
+    background: red;
+    color: #fff;
+    height: auto;
+    line-height: 10px;
+
+}
+
 .no-shadows {
     box-shadow: none !important;
 }
@@ -98,34 +112,34 @@ body {
 paddings
  */
 .p2 {
-    padding: 10px;
+    padding: 10px !important;
 }
 
 .my-1 {
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
 }
 
 .my-2 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
 }
 
 .my-3 {
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 7px !important;
+    margin-bottom: 7px !important;
 }
 
 .mt-1 {
-    margin-top: 3px;
+    margin-top: 3px !important;
 }
 
 .mt-2 {
-    margin-top: 5px;
+    margin-top: 5px !important;
 }
 
 .mt-3 {
-    margin-top: 7px;
+    margin-top: 7px !important;
 }
 
 
@@ -139,4 +153,17 @@ paddings
     .d-flex {
         flex-direction: column;
     }
+}
+
+.btn-outline-primary {
+    background: none !important;
+    box-shadow: inset 0 0 0 2px var(--primary);
+    color: var(--primary);
+
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary) !important;
+    box-shadow: inset 0 0 0 2px var(--primary);
+    color: #fff;
 }

@@ -50,7 +50,9 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="/home" title="Home" class="navItem"><i class="material-icons">home</i></a></li>
           <li><a href="/categories"  title="Categories" class="navItem"><i class="material-icons">format_list_bulleted</i></a></li>
-          <li><a href="/cart" title="Cart" class="navItem"><i class="material-icons">shopping_cart</i></a></li>
+          <li style="position: relative;"><a href="/cart" title="Cart" class="navItem"><i class="material-icons">shopping_cart</i></a>
+          <div class="cart-value hide"></div>
+          </li>
           <li><a href="/login"  title="Login / SignUp" class="navItem"><i class="material-icons">fingerprint</i></a></li>
           <li><a href="/contact"  title="Contact" class="navItem"><i class="material-icons">call</i></a></li>
         </ul>
@@ -110,6 +112,7 @@
     <a class="btn-floating btn-large accent waves-effect waves-light">
       <i class="large material-icons">shopping_cart</i>
     </a>
+    <div class="cart-value hide">5</div>
     <ul>
       <li><a href="/checkout"class="btn-floating red " title="Check Out"><i class="material-icons">attach_money</i></a></li>
       <li><a href="/cart"class="btn-floating yellow darken-1" title="View Cart"><i class="material-icons">format_list_bulleted</i></a></li>
@@ -119,6 +122,7 @@
 
 <div id="content">
   <div class="hide-on-large-only" style="margin:18px 0;padding: 10px"></div>
+  <div class="show-on-med" style="margin:0px 0;padding: 5px"></div>
   @yield('content')
 </div>
 
@@ -182,7 +186,29 @@
     function clearText(){
        document.getElementById("search").value = "";
        document.getElementById("search-mobile").value="";
+    }
+
+    function addItemToCart(category,id,quantity=1){
+      if(!localStorage.cart){
+        localStorage.cart = "[]";
       }
+      let data = JSON.parse(localStorage.cart);
+      let entry = data.find(e=>e.category==category&&e.id==id);
+      if(!entry){
+        data.push({category,id,quantity});
+        localStorage.cart = JSON.stringify(data);
+        $(".cart-value").text(data.length);
+        $(".cart-value").removeClass('hide');
+      }
+    }
+
+    function isAreadyAdded(category,id){
+      if(!localStorage.cart){
+        return false;
+      }
+      let data = JSON.parse(localStorage.cart);
+      return data.some(e=>e.category==category&&e.id==id)
+    }
 
   </script>
 </body>
