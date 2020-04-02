@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*For mail*/
+Route::get('sendmail', function () {
 
+	$data = array('name'=>'Anmol','body'=>"Test Body",'subject'=>"Test subject123");
+
+	Mail::to('ashu.empli5@gmail.com')->send(new SendMail($data));
+	echo "Done !";
+});
+
+Route::get('pdfmail','MailController@sendmail');
+Route::view('pdf','PDF.pdfInvoice');
+/*Mail end here*/
 Route::view('/','layout');
 
 Route::view('/Header','layout');
@@ -41,5 +54,3 @@ Route::group(["prefix"=>"categories"], function() {
     Route::get("/gaming","ProductController@Gaming");
     Route::get("/music","ProductController@Music");
 });
-
-//Route::view('/animate','animatedBG');
