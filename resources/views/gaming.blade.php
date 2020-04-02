@@ -108,6 +108,7 @@
 
 
 </style>
+<div class="show-on-medium" style="margin:0px 0;padding: 5px"></div>
 <div class="row">
   @foreach($data as $item)
   <!-- <div class="col l3 m4 s6 display-card">

@@ -125,11 +125,11 @@
 
 <div class="slider container-fluid black hide-on-med-and-up show-on-small">
 	<div class="carousel carousel-slider">
-		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/500x550"></a>
-		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/500x551"></a>
-		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/501x550"></a>
-		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/501x551"></a>
-		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/500x552"></a>
+		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/200x230"></a>
+		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/200x201"></a>
+		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/201x200"></a>
+		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/201x201"></a>
+		<a class="carousel-item" href="#"><img class="responsive-img" src="https://source.unsplash.com/random/200x202"></a>
 	</div>
 </div>
 <div>
@@ -145,7 +145,7 @@
       <a href="{{$item['path']}}" class="nav-link">
         <div class="card cardHover">
           <div class="card-image waves-effect waves-block waves-light">
-            <img img-fix src="{{$item['link']}}" alt="image">
+            <img img-fix src="{{$item['link']}}/100x100" alt="image">
           </div>
           <div class="card-content black-text">
             {{$item['name']}}
