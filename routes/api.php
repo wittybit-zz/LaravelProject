@@ -35,27 +35,27 @@ Route::get('/home',function(){
 	return[
 		[
 			'name'=>'PlayStation 4',
-			'image'=>'Images/PS.jpg',
+			'image'=>'Images/PS4.jpg',
 			'heading'=>'The best-selling gaming console',
 			'link'=>'/categories/gaming'
 
 		],
 		[
 			'name'=>'Nike Sneakers',
-			'image'=>"{{ URL::asset('Images/nike.jpg') }}",
+			'image'=>'Images/nike.jpg',
 			'heading'=>'Maximum style, maximum comfort',
 			'link'=>'/categories/apparel'
 		],
 		[
 			'name'=>'Designer Furniture',
-			'image'=>"{{ URL::asset('Images/furniture.jpg') }}",
+			'image'=>'Images/furniture.jpg',
 			'heading'=>'Make your house feel like home',
 			'link'=>'/categories/furniture'
 		],
 		[
-			'name'=>'The Honest Company',
-			'image'=>"{{ URL::asset('Images/nike.jpg') }}",
-			'heading'=>'Makeup for  every occasion',
+			'name'=>'Premium Cosmetics',
+			'image'=>'Images/cosmetics.jpg',
+			'heading'=>'Makeup for every occasion',
 			'link'=>'/categories/cosmetics'
 		]
 	];
@@ -123,7 +123,7 @@ return[
 	[
 		'name'=>'Play Station 4',
 		'link'=>'https://source.unsplash.com/ePJUCF48vgo/200x150',
-		'description'=>'The most selling console on the planet',
+		'description'=>'The best-selling console on the planet',
 		'o_price'=>'222',
 		'c_price'=>'221',
 		'thumbs'=>[
@@ -133,7 +133,7 @@ return[
 	[
 		'name'=>'XBox One X',
 		'link'=>'https://source.unsplash.com/P1CJmbRIfSk/200x150',
-		'description'=>'The most selling console on the planet',
+		'description'=>'The best from microsoft',
 		'o_price'=>'522',
 		'c_price'=>'291',
 		'thumbs'=>[
