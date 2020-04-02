@@ -23,12 +23,6 @@ class ProductController extends Controller
         return $response->original;
     }
 
-    function getProducts(){
-        $request = Request::create('api/home', 'GET');
-        $response = Route::dispatch($request);
-        return $response->original;
-    }
-
     public function Apparel()
     {
         return view('apparel');
@@ -65,7 +59,7 @@ class ProductController extends Controller
     {
         $request = Request::create('api/categories/gaming', 'GET');
         $response = Route::dispatch($request);
-        return view('gaming',['data'=>$response->original, 'category'=>'gaming']);
+        return view('gaming',['data'=>$response->original,'category'=>'gaming']);
     }
 
     public function Music()

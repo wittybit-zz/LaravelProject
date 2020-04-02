@@ -23,6 +23,8 @@ class userController extends Controller
 		]);
     	$user->save();
 
+        /*Send Mail to user*/
+
     	return response()->json([
     		'message'=>'User recorded successfully'
     	],201);

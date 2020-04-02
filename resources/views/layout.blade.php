@@ -51,9 +51,13 @@
           <li><a href="/home" title="Home" class="navItem"><i class="material-icons">home</i></a></li>
           <li><a href="/categories"  title="Categories" class="navItem"><i class="material-icons">format_list_bulleted</i></a></li>
           <li style="position: relative;"><a href="/cart" title="Cart" class="navItem"><i class="material-icons">shopping_cart</i></a>
-          <div class="cart-value hide"></div>
+          <div class="cart-value-text cart-value hide"></div>
           </li>
+          @if(session()->has('user'))
+          <li><a href="/logout"  title="Logout" class="navItem"><i class="material-icons">exit_to_app</i></a></li>
+          @else
           <li><a href="/login"  title="Login / SignUp" class="navItem"><i class="material-icons">fingerprint</i></a></li>
+          @endif
           <li><a href="/contact"  title="Contact" class="navItem"><i class="material-icons">call</i></a></li>
         </ul>
 
@@ -98,7 +102,10 @@
       </li>
           <li><a href="/home" class="waves-effect waves-accent icon-white">Home<i class="material-icons icon-white">home</i></a></li>
           <li><a href="/categories" class="waves-effect waves-accent icon-white">Categories<i class="material-icons icon-white">format_list_bulleted</i></a></li>
-          <li><a href="/cart" class="waves-effect waves-accent icon-white">Cart<i class="material-icons icon-white">shopping_cart</i></a></li>
+          <li><a href="/cart" class="waves-effect waves-accent icon-white">Cart<i class="material-icons icon-white">shopping_cart</i>
+          <span class="cart-value-text cart-value hide right" style="top:50%;transform:translateY(-50%);right: 10%;border-radius: 5px">5</span>
+          </a>
+          </li>
           <hr>
           <li><a href="/contact" class="waves-effect waves-accent icon-white">Contact Us<i class="material-icons icon-white">email</i></a></li>
           <li><a href="/login" class="waves-effect waves-accent icon-white">FAQs<i class="material-icons icon-white">question_answer</i></a></li>
@@ -112,7 +119,7 @@
     <a class="btn-floating btn-large accent waves-effect waves-light">
       <i class="large material-icons">shopping_cart</i>
     </a>
-    <div class="cart-value hide">5</div>
+    <div class="cart-value-text cart-value hide">5</div>
     <ul>
       <li><a href="/checkout"class="btn-floating red " title="Check Out"><i class="material-icons">attach_money</i></a></li>
       <li><a href="/cart"class="btn-floating yellow darken-1" title="View Cart"><i class="material-icons">format_list_bulleted</i></a></li>
@@ -122,7 +129,6 @@
 
 <div id="content">
   <div class="hide-on-large-only" style="margin:18px 0;padding: 10px"></div>
-  <div class="show-on-med" style="margin:0px 0;padding: 5px"></div>
   @yield('content')
 </div>
 
