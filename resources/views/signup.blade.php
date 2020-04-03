@@ -60,18 +60,18 @@
 
             <div class='row'>
               <div class='input-field col s6'>
-                <input class='validate' type='text' name='fname' id='fname' />
+                <input value="{{old('fname')}}" class='validate' type='text' name='fname' id='fname' />
                 <label for='fname'>First Name</label>
               </div>
               <div class='input-field col s6'>
-                <input class='' type='text' name='lname' id='lname' />
+                <input value="{{old('lname')}}" class='' type='text' name='lname' id='lname' />
                 <label for='lname'>Last Name</label>
               </div>
               @error('lname')
                 {{$message}}
               @enderror
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' />
+                <input value="{{old('email')}}" class='validate' type='email' name='email' id='email' />
                 <label for='email'>Enter your email</label>
               </div>
               <div class='input-field col s12'>

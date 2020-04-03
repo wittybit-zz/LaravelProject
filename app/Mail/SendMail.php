@@ -10,7 +10,6 @@ use Illuminate\Queue\SerializesModels;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-use App\User;
 
 class SendMail extends Mailable
 
@@ -62,8 +61,8 @@ class SendMail extends Mailable
 
     {
 
-        return $this->from('ashutosh.empli5@gmail.com')->subject($this->data['subject'])
-                ->view('mail')->with($this->data);
+        return $this->from('ashutosh.empli5@gmail.com')->subject("hello")
+                ->view('mail')->with('name','Ashutosh');
 
     }
 

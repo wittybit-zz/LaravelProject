@@ -82,7 +82,7 @@
               </script>
               @enderror
             </div>
-
+            <input name="redirect" type="hidden" value="{{app('request')->input('redirect')}}" name="">
             <div class='row'>
               <div class='input-field'>
                 <input class='validate' type='password' name='password' id='password' />

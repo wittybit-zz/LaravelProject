@@ -25,7 +25,7 @@
             font-weight: bold;
             font-size: x-small;
         } */
-        .invoice table {
+        .invoice {
             margin: 15px;
         }
         .invoice h3 {
@@ -67,15 +67,11 @@
     <table width="100%">
         <tr>
             <td align="left" style="width: 40%;">
-                <h3>{{$client_name ?? "John Doe"}}</h3>
-                <pre>
-Street 15
-123456 City
-United Kingdom
-<br /><br />
-Date: 2018-01-01
-Identifier: #uniquehash
-Status: Paid
+                <h3>{{session('user')->name ?? "John Doe"}}</h3>
+                <pre>{{session('user')->email}}
+Date: {{date('d M Y')}}
+Identifier: #{{rand(111111,999999)}}
+Order type: {{$payment['type']}}
 </pre>
 
 
@@ -85,13 +81,13 @@ Status: Paid
             </td>
             <td align="right" style="width: 40%;">
 
-                <h3>CompanyName</h3>
+                <h3>Shopper Street</h3>
                 <pre>
-                    https://company.com
+                    https://shopperStreet.com
 
-                    Street 26
-                    123456 City
-                    United Kingdom
+                    GT Road,
+                    144401 Jalandhar
+                    Punjab,India
                 </pre>
             </td>
         </tr>
@@ -103,31 +99,60 @@ Status: Paid
 <br/>
 
 <div class="invoice">
-    <h3>Invoice specification #123</h3>
+    <h3>Invoice specification #{{rand(15,35)}}</h3>
     <table width="100%">
         <thead>
         <tr>
+            <th>SN</th>
             <th>Description</th>
             <th>Quantity</th>
             <th>Total</th>
         </tr>
         </thead>
         <tbody>
+        @foreach($products as $item)
         <tr>
-            <td>Item 1</td>
-            <td>1</td>
-            <td align="left">€15,-</td>
+            @php
+            $var = $loop->iteration
+            @endphp
+            <td>{{$loop->iteration}}</td>
+            <td align="left">{{$item['name']}}
+            <br>
+            <small>{{$item['description']}}</small>
+            </td>
+            <td>{{$item['price']}} x {{$item['quantity']}}</td>
+            <td align="right">{{$item['total']}}</td>
+        </tr>
+        @endforeach
+        <tr>
+            <td>{{++$var}}</td>
+            <td colspan="2">Shipping</td>
+            <td align="right">{{$shipping}}</td>
+        </tr>
+        <tr>
+            <td>{{++$var}}</td>
+            <td colspan="2">Order payment By
+            </td>
+            <td align="right">{{$payment['name']}}
+            @if($payment['name'] == "Cash On Delivery")
+            <br>
+            <small>Extra Charge Applicable Rs. 40</small>
+            @php
+            $total += 40
+            @endphp
+            @endif
+            </td>
         </tr>
         </tbody>
 
         <tfoot>
         <tr>
-            <td colspan="1"></td>
-            <td align="left">Total</td>
-            <td align="left" class="gray">€15,-</td>
+            <td colspan="3">Total</td>
+            <td align="right">{{$total}}</td>
         </tr>
         </tfoot>
     </table>
+    <p>This is a computer generated invoice and doesnot require signature.</p>
 </div>
 
 <div class="information" style="position: absolute; bottom: 0;">
@@ -137,7 +162,7 @@ Status: Paid
                 &copy; {{ date('Y') }} {{ config('app.url') }} - All rights reserved.
             </td>
             <td align="right" style="width: 50%;">
-                Company Slogan
+                Shopper Street - Absolutely. Positively. Perfect.
             </td>
         </tr>
 
