@@ -109,6 +109,9 @@
 
 </style>
 <div class="show-on-medium" style="margin:0px 0;padding: 5px"></div>
+<div class="container-fluid">
+  <h4 style="margin-left:10px;font-weight: bold;text-transform: capitalize;">Category: {{$category}}</h4>
+</div>
 <div class="row">
   @foreach($data as $item)
   <!-- <div class="col l3 m4 s6 display-card">

@@ -53,6 +53,10 @@ class OrderController extends Controller
     }
 
     public function requestPDF(){
+        echo '<div class="container" style="text-align: center;">
+                <h1>Your Download will start in few seconds</h1>
+                <p>Please wait</p>
+            </div>';
         ?>
         <script type="text/javascript">
         function showFile(blob){
@@ -78,6 +82,7 @@ class OrderController extends Controller
             // For Firefox it is necessary to delay revoking the ObjectURL
             localStorage.clear();
             window.URL.revokeObjectURL(data);
+            localStorage.payment = "99";
             location.href = "/home";
           }, 100);
         }
@@ -114,34 +119,5 @@ class OrderController extends Controller
         location.href = "/thankyou";
         </script>
         <?php
-    }
-
-    public function updateUser($id,Request $request){
-    
-    	if(User::where('id',$id)->exists()&&count($request->input())>0){
-    		
-    		$user = User::find($id);
-    		$user->name = is_null($request->name)?$user->name:$request->name;
-    		$user->course = is_null($request->course)?$user->course:$request->course;
-    		$user->save();
-    		return response()->json([
-    			'User'=>$user->name,
-    			'message'=>"records updated successfully"
-    		],200);
-    	}
-    	else{
-    		return response()->json([
-    			'message'=>"User not found"
-    		],404);
-    	}
-    }
-
-    public function daleteUser($id){
-    	
-    }
-
-    public function removeSession(Request $request){
-    	$request->session()->forget('user');
-    	return redirect('home');
     }
 }

@@ -184,7 +184,7 @@
           </div>
           <div class="footer-copyright center">
             <div class="container">
-            © 2019 All rights reserved <kbd>shopperstreet.com</kbd>
+            © {{date('Y')}} All rights reserved <kbd>shopperstreet.com</kbd>
             </div>
           </div>
         </footer>
@@ -192,6 +192,9 @@
     $(document).ready(function(){
         $('.sidenav').sidenav();
         $('.fixed-action-btn').floatingActionButton();
+        if(localStorage.payment == "99"){
+          localStorage.clear();
+        }
         updateCartValue();
 
     });

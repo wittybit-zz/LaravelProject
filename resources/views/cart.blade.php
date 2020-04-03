@@ -187,7 +187,7 @@
 		for(i in dd){
 			total+=Number(dd[i]);
 		}
-		$(".total").text(total);
+		$(".total").text(total.toFixed(2));
 
 	}
 

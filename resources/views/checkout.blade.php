@@ -20,7 +20,10 @@
       box-shadow: none !important;
     }
     .card-wrapper{
-    	transform: scale(0.90)
+    	max-width: 100%;
+    }
+    .jp-card{
+    	min-width: 100% !important;
     }
 </style>
 <div class="container font1">
