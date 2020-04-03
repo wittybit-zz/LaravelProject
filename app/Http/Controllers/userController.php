@@ -56,7 +56,9 @@ class userController extends Controller
     		}
     		/*Create session*/
     		$request->session()->put('user',$user);
-    		return redirect('home');
+            if($request->redirect)
+    		return redirect($request->redirect);
+            return redirect('home');
     		/*Redirect back to the home page*/
     		//
     	}

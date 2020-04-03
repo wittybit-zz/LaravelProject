@@ -4,16 +4,15 @@
   <div class="show-on-med-and-down" style="margin:0px;padding:10px"></div>
   <h5 style="font-weight: bold">Thank you for placing order</h5>
   <div class="card">
-        <div class="card-image">
-          <img src="https://source.unsplash.com/random/100x50">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+        <div class="card-content font1">
+          <h5>Your order number is <kbd>{{rand(111111,999999)}}</kbd></h5>
+          <p>You will receive a confirmation mail on {{session('user')->email}}</p>
+          <hr>
+          <p>Expected Delivery by</p>
+          <h5 class="green-text">{{Date('d M Y', strtotime("+3 days"))}}</h5>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="/download">Download Invoice</a>
         </div>
       </div>
 </div>  

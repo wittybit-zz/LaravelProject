@@ -23,13 +23,12 @@ Route::get('sendmail', function () {
 	echo "Done !";
 });
 
-Route::get('pdfmail','OrderController@requestPDF');
+Route::get('/download','OrderController@requestPDF');
 Route::get('/download/invoice','OrderController@getPDF');
 Route::view('pdf','PDF.pdfInvoice');
 /*Mail end here*/
-Route::view('/','layout');
 
-Route::view('/Header','layout');
+Route::get('/','NavController@home');
 
 Route::get('/home','NavController@home');
 Route::view('/orderplaced','thankyou');

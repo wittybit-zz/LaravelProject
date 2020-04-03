@@ -61,7 +61,7 @@
 	}
 </style>
 <div class="container-fluid row font1">
-	<div class="col s12 m7">
+	<div class="col s12 m7 items">
 		<h5 style="font-weight:bold">MY BAG</h5>
 		<hr>
 		<div class="products">
@@ -114,7 +114,8 @@
   });
 	function showAllItems(){
 		if(!localStorage.cart){
-			return;
+			$(".summary").html("");
+			$(".items").removeClass("m7").addClass("m12");
 		}
 		data = JSON.parse(localStorage.cart);
 		let html = ""

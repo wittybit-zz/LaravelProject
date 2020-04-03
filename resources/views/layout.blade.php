@@ -143,15 +143,21 @@
                 <table class="white-text">
                   <tr>
                     <td><i class="fa fa-map-marker"></i></td>
-                    <td>Karangwaru St, Yogyakarta, Indonesia</td>
+                    <td>Delhi GT Road, Jalandhar, Punjab, India 144401</td>
                   </tr>
                   <tr>
                     <td><i class="fa fa-phone-square"></i></td>
-                    <td>+91- 0088008800</td>
+                    <td>
+                      <a href="tel:+91- 0088008800">+91- 0088008800</a>
+                    </td>
                   </tr>
                   <tr>
                     <td><i class="fa fa-envelope"></i></td>
-                    <td>support@shopperstreet.co.in</td>
+                    <td>
+                      <a href="mailto:support@shopperstreet.co.in">
+                        support@shopperstreet.co.in
+                      </a>
+                    </td>
                   </tr>
                 </table>
               </div>
