@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title','Gaming')
+@section('title','Explore Products')
 @section('content')
 <style type="text/css">
   .card-image {

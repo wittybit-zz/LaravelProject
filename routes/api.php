@@ -216,3 +216,18 @@ Route::get('/categories/cosmetics',function(){
 	include '../database/Products/db_cosmetics.php';
 	return response()->json($db_cosmetics);
 });
+
+Route::get('/categories/electronics',function(){
+	include '../database/Products/db_electronics.php';
+	return response()->json($db_electronics);
+});
+
+Route::get('/categories/books',function(){
+	include '../database/Products/db_books.php';
+	return response()->json($db_books);
+});
+
+Route::get('/categories/apparel',function(){
+	include '../database/Products/db_apparel.php';
+	return response()->json($db_apparel);
+});

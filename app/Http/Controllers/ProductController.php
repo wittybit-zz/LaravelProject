@@ -31,12 +31,16 @@ class ProductController extends Controller
 
     public function Apparel()
     {
-        return view('apparel');
+        $request = Request::create('api/categories/apparel', 'GET');
+        $response = Route::dispatch($request);
+        return view('gaming',['data'=>$response->original,'category'=>'apparel']);
     }
 
     public function Books()
     {
-        return view('books');
+        $request = Request::create('api/categories/books', 'GET');
+        $response = Route::dispatch($request);
+        return view('gaming',['data'=>$response->original,'category'=>'books']);
     }
 
     public function cosmetics()
@@ -48,7 +52,9 @@ class ProductController extends Controller
 
     public function Electronics()
     {
-        return view('electronics');
+        $request = Request::create('api/categories/electronics', 'GET');
+        $response = Route::dispatch($request);
+        return view('gaming',['data'=>$response->original,'category'=>'electronics']);
     }
 
     public function Fitness()
