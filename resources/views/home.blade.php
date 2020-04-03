@@ -145,7 +145,7 @@
       <a href="{{$item['path']}}" class="nav-link">
         <div class="card cardHover">
           <div class="card-image waves-effect waves-block waves-light">
-            <img img-fix src="{{$item['link']}}/100x100" alt="image">
+            <img img-fix src="{{$item['link']}}/300x300" alt="image">
           </div>
           <div class="card-content black-text">
             {{$item['name']}}

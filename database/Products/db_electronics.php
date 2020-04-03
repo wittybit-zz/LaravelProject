@@ -32,8 +32,8 @@ $db_electronics = [
 		'name'=>'Sony Bravia 4K UHD TV',
 		'link'=>'https://images-na.ssl-images-amazon.com/images/I/71L-7fHROYL._SL1500_.jpg',
 		'description'=>'Screen size - 163.9 cm (65 Inches)',
-		'o_price'=>'50000',
-		'c_price'=>'88000',
+		'o_price'=>'88000',
+		'c_price'=>'51250',
 		'thumbs'=>[
             'https://images-na.ssl-images-amazon.com/images/I/71ddMqK6pKL._SL1500_.jpg',
             'https://images-na.ssl-images-amazon.com/images/I/71SRrYNNYAL._SL1500_.jpg',
@@ -46,8 +46,8 @@ $db_electronics = [
 		'name'=>'HP Spectre x360-13t Ultrabook',
 		'link'=>'https://images-na.ssl-images-amazon.com/images/I/51CW9Mg54qL._SL1000_.jpg',
 		'description'=>'i7-8550U with 16GB RAM, 512GB SSD',
-		'o_price'=>'999',
-		'c_price'=>'599',
+		'o_price'=>'54000',
+		'c_price'=>'47999',
 		'thumbs'=>[
             'https://images-na.ssl-images-amazon.com/images/I/51G1fMww3wL._SL1000_.jpg',
             'https://images-na.ssl-images-amazon.com/images/I/51Dw6E0BV%2BL._SL1000_.jpg',

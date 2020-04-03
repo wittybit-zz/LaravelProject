@@ -59,12 +59,16 @@ class ProductController extends Controller
 
     public function Fitness()
     {
-        return view('fitness');
+        $request = Request::create('api/categories/fitness', 'GET');
+        $response = Route::dispatch($request);
+        return view('gaming',['data'=>$response->original,'category'=>'fitness']);
     }
 
     public function Furniture()
     {
-        return view('furniture');
+        $request = Request::create('api/categories/furniture', 'GET');
+        $response = Route::dispatch($request);
+        return view('gaming',['data'=>$response->original,'category'=>'furniture']);
     }
 
     public function Gaming()

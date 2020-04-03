@@ -1,5 +1,5 @@
 <?php
-$db_books = [
+$db_music = [
 	[
         'id'=>'1',
 		'name'=>'Mi Earphone Basic',
@@ -30,24 +30,30 @@ $db_books = [
 	],
 	[
 		'id'=>'3',
-		'name'=>'XBox One X',
-		'link'=>'https://source.unsplash.com/P1CJmbRIfSk/200x150',
-		'description'=>'The most selling console on the planet',
-		'o_price'=>'522',
-		'c_price'=>'291',
+		'name'=>'Sony BDV-E4100 Home Theatre System',
+		'link'=>'https://images-na.ssl-images-amazon.com/images/I/51KjvLHHshL._SL1200_.jpg',
+		'description'=>' 5.1 Dolby Digital surround, with bluetooth and WiFi support',
+		'o_price'=>'12000',
+		'c_price'=>'8200',
 		'thumbs'=>[
-			''
+			'https://images-na.ssl-images-amazon.com/images/I/51N7Gk2CoXL._SL1200_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/51x-qp3pFAL._SL1200_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/61BiUOkOPcL._SL1200_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/61LniMTPzBL._SL1300_.jpg'
 		]
 	],
 	[
 		'id'=>'4',
-		'name'=>'Desktop Gaming',
-		'link'=>'https://source.unsplash.com/TErYPw4o1KM/200x150',
-		'description'=>'Welcome to the master race',
-		'o_price'=>'999',
-		'c_price'=>'599',
+		'name'=>'JBL Flip 3 Stealth ',
+		'link'=>'https://images-na.ssl-images-amazon.com/images/I/81DRhqE04BL._SL1500_.jpg',
+		'description'=>'Waterproof Portable Bluetooth Speaker',
+		'o_price'=>'4000',
+		'c_price'=>'2499',
 		'thumbs'=>[
-			''
+			'https://images-na.ssl-images-amazon.com/images/I/81LtF12PYLL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/81BvfqqT4dL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/81M3dqzsVoL._SL1500_.jpg',
+			'https://images-na.ssl-images-amazon.com/images/I/71kl0uk7RBL._SL1500_.jpg'
 		]
 	]
 ];
