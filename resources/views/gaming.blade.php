@@ -104,6 +104,12 @@
   .img-container{
     flex:4;
   }
+  #toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 5%;
+  left:5%;  
+}
   /* added custom css */
 
 

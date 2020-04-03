@@ -37,4 +37,8 @@ class MailController extends Controller
         }
         return response()->json(compact('this'));
 	 }
+
+     function getPDF($data){
+        
+     }
 }

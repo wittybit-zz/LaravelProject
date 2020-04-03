@@ -23,7 +23,8 @@ Route::get('sendmail', function () {
 	echo "Done !";
 });
 
-Route::get('pdfmail','MailController@sendmail');
+Route::get('pdfmail','OrderController@requestPDF');
+Route::get('/download/invoice','OrderController@getPDF');
 Route::view('pdf','PDF.pdfInvoice');
 /*Mail end here*/
 Route::view('/','layout');
@@ -31,6 +32,7 @@ Route::view('/','layout');
 Route::view('/Header','layout');
 
 Route::get('/home','NavController@home');
+Route::view('/orderplaced','thankyou');
 Route::get('/categories','NavController@categories');
 Route::view('/cart','cart');
 Route::get('/cart/add/{category}/{id}','ProductController@addItem');
@@ -56,3 +58,7 @@ Route::group(["prefix"=>"categories"], function() {
 });
 
 //Route::view('/animate','animatedBG');
+
+/*Payment*/
+Route::get('/payment/{method}','OrderController@requestAddOrder');
+Route::get('/completed','OrderController@completeOrder');

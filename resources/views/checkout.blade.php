@@ -106,7 +106,7 @@
     </div>
     <div class="row">
     <div class="col s12 m6">
-        	<a href="" class="btn blue btn-block">Make Payment</a>
+        	<a href="/payment/1" class="btn blue btn-block">Make Payment</a>
     </div>
 	</div>
       </div>
@@ -140,7 +140,7 @@
 		    </label>
 		  </p>
 		  <div style="text-align: right">
-			<a href="" class="btn blue" >Make Payment</a>
+			<a href="/payment/2" class="btn blue" >Make Payment</a>
 		  </div>
       </div>
     </li>
@@ -172,7 +172,7 @@
 		    </label>
 		  </p>
 		  <div style="text-align: right">
-			<a href="" class="btn blue" >Proceed to Pay</a>
+			<a href="/payment/3" class="btn blue" >Proceed to Pay</a>
 		  </div>
       </div>
     </li>
@@ -186,14 +186,14 @@
                 <label for='upi'>Enter your virtual Payment Address</label>
         </div><br>
       	<span>
-      		<a href="" class="btn blue">Make Payment</a>
+      		<a href="/payment/4" class="btn blue">Make Payment</a>
       	</span><br>
       </div>
     </li>
     <li>
       <div class="collapsible-header"><i class="fa fa-inr fa-2x"></i>Cash on Delivery</div>
       <div class="collapsible-body"><span>Extra Delivery Charge of ₹40 Applicable on COD orders.</span><hr>
-		<a href="" class="btn blue">Place Order</a>
+		<a href="/payment/5" class="btn blue">Place Order</a>
       </div>
     </li>
   </ul>

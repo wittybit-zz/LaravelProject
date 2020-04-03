@@ -19,15 +19,15 @@ class userController extends Controller
     	$user->email = $request->email;
     	$user->password = $request->password;
     	$request->validate([
-			'lname'=>'required|min:9|max:20'
+			'lname'=>'required|'
 		]);
     	$user->save();
+        $request->session()->put('user',$user);
+
 
         /*Send Mail to user*/
 
-    	return response()->json([
-    		'message'=>'User recorded successfully'
-    	],201);
+    	return redirect('home');
     }
 
     public function getUser($id){
